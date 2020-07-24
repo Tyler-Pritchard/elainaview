@@ -1,0 +1,88 @@
+{
+    "chat": [
+        {
+        "id": 1,
+        "username": "String",
+        "content": [{
+            "sender": "String",
+		    "text": "String",
+		    "date": {
+			    "type": "Date",
+			    "default": "Date.now()"
+		    }
+        }]
+    }],
+
+    "docapprove": [
+        {
+            "id": 1,
+            "user": {
+                "type": "String",
+                "required": "true"
+            },
+            "approver": {
+                "type": "String",
+                "required": "true"
+            },
+            "link": [{
+                "url": "String",
+                "status": "String",
+                "date": {
+                    "type": "Date",
+                    "default": "Date.now()"
+                }
+            }]
+        }
+    ],
+
+    "user": [
+        {
+            "id": 1,
+            "accessCode": {
+              "required": true
+            },
+            "username": {
+              "required": true
+            },
+            "email": {
+              "required": true
+            },
+            "password": {
+              "required": true
+            },
+            "companyName": {
+              "required": true
+            },
+            "sessionPath": {},
+            "subscriptionType": {},
+            "status": {},
+            "createdAt": {
+              "default": 1595618810569
+            },
+            "role": {
+              "enum": [
+                "admin",
+                "customer"
+              ],
+              "default": "customer"
+            },
+            "TOA": [
+              null
+            ],
+            "Employee_NonCompete_Agreement": {},
+            "Dress_Code_Policy": {},
+            "Independent_Contractor_Agreement": {},
+            "Buy_Sell_Agreement": {},
+            "Operating_Agreement": {},
+            "Equal_Opportunity_Employment_Policy": {},
+            "Mutual_Non_Disclosure_Agreement": {},
+            "Operating_Agreement_Multi_Member": {},
+            "Corporate_Bylaws": {},
+            "Family_Medical_Leave_Policy": {},
+            "Background_Check_Policy": {},
+            "Trademark_Application": {},
+            "Application_for_Employment": {},
+            "Employee_Confidentiality_and_Proprietary_Rights_Agreement": {}
+        }
+    ]
+}
