@@ -1,3 +1,11 @@
-export const USER_LOADING = 'USER_LOADING';
+export const ADD_CHAT = 'ADD_CHAT';
 export const CHAT_LOADING = 'CHAT_LOADING';
+export const CHAT_FAILED = 'CHAT_FAILED';
+
+export const ADD_DOCAPPROVE = 'ADD_DOCAPPROVE';
 export const DOCAPPROVE_LOADING = 'DOCAPPROVE_LOADING';
+export const DOCAPPROVE_FAILED = 'DOCAPPROVE_FAILED';
+
+export const ADD_USER = 'ADD_USER';
+export const USER_LOADING = 'USER_LOADING';
+export const USER_FAILED = 'USER_FAILED';

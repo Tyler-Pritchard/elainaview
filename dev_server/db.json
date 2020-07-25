@@ -13,7 +13,7 @@
         }]
     }],
 
-    "docapprove": [
+    "docApprove": [
         {
             "id": 1,
             "user": {
