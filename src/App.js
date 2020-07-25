@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
-import Navbar from './components/common/Navbar';
-import Sidebar from './components/common/Sidebar';
 import Main from './components/Main';
-import Footer from './components/common/Footer';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { ConfigureStore } from './redux/configureStore';
+import './App.css';
+
+const store = ConfigureStore();
 
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div>
-          <Navbar />
-          <Route exact path="/" component={() => <Redirect to="/main" />} />
-
-          <Sidebar />
-          <Route exact path="/main" component={() => <Main />} />
-          <Footer />
-        </div>
-      </Router>
+      <Provider store={store}>
+        <BrowserRouter>
+          <div>
+            <Main />
+          </div>
+        </BrowserRouter>
+      </Provider>
     );
   }
 }
