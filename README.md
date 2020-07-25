@@ -1,7 +1,7 @@
 ## ReactJS frontend for ELAINA
 
 
-Boot required JSON server(s):
+Boot required JSON server(s) from the dev_server directory:
 
 ### `json-server --watch db.json -p 3001 -d 2000 -H <IP ADDRESS>`
 
