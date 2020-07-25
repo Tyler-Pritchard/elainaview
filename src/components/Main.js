@@ -1,9 +1,20 @@
 import React, { Component } from 'react'
-import Footer from './components/common/Footer';
-import Navbar from './components/common/Navbar';
-import Sidebar from './components/common/Sidebar';
+import Navbar from './common/Navbar';
+import Sidebar from './common/Sidebar';
+import Footer from './common/Footer';
+import Home from './Home';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
+const mapStateToProps = state => {
+    return {
+        chat: state.chat,
+        user: state.user,
+        docApprove: state.docApprove
+    }
+}
+
 
 class Main extends Component {
     render() {
@@ -11,14 +22,18 @@ class Main extends Component {
             <div>
                 <Navbar />
                 <Sidebar />
-                <Switch>
-                    <Route exact path="/" component={() => <Redirect to="/main" />} />
-                    <Route exact path="/main" component={() => <Main />} />
-                </Switch>
+                <TransitionGroup>
+                    <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
+                        <Switch>
+                            <Route path='/home' component={Home} />
+                            <Redirect to='/home' />
+                        </Switch>
+                    </CSSTransition>
+                </TransitionGroup>
                 <Footer />
             </div>
         )
     }
 }
 
-export default withRouter(connect)(Main);
+export default withRouter(connect(mapStateToProps))(Main);

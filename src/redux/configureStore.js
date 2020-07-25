@@ -1,7 +1,24 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createForms } from 'react-redux-form';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
+import { User } from './reducers/user';
+import { Chat } from './reducers/chat';
+import { DocApprove } from './reducers/docApprove';
+import { MyForm } from './reducers/forms/myForm';
 
 export const ConfigureStore = () => {
-    const store = createStore()
+    const store = createStore(
+        combineReducers({
+            user: User,
+            chat: Chat,
+            docApprove: DocApprove,
+            ...createForms({
+                myForm: MyForm
+            })
+        }),
+        applyMiddleware(thunk, logger)
+    );
 
     return store;
 };
