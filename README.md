@@ -3,7 +3,7 @@
 
 Boot required JSON server(s):
 
-### `json-server --watch db.json`
+### `json-server --watch db.json -p 3001 -d 2000 -H <IP ADDRESS>`
 
 
 ## Available Scripts
