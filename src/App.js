@@ -11,11 +11,11 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <BrowserRouter>
-          <div className="App">
+         <BrowserRouter>
+          <div>
             <Main />
           </div>
-        </BrowserRouter>
+         </BrowserRouter>
       </Provider>
     );
   }
