@@ -48,10 +48,12 @@
     "webpack": "^4.44.1"
   },
   "scripts": {
-    "start": "NODE_PATH=./src react-scripts start",
+    "start": "serve -s build",
+    "dev": "NODE_PATH=./src react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "lint:check": "eslint . --ext=js,jsx;  exit 0",
     "lint:fix": "eslint . --ext=js,jsx --fix;  exit 0",
