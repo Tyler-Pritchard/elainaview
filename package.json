@@ -65,7 +65,7 @@
   "bugs": {
     "url": "https://github.com/deeplawtechnology/issues"
   },
-  "homepage": "https://tyler-pritchard.github.io/",
+  "homepage": "https://elainaview.herokuapp.com/",
   "optionalDependencies": {
     "@types/googlemaps": "3.39.6",
     "@types/markerclustererplus": "2.1.33",
