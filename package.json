@@ -9,6 +9,10 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "acorn": "^7.3.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "bootstrap": "^4.5.0",
     "bootstrap-social": "^5.1.1",
     "chartist": "0.10.1",
@@ -40,7 +44,8 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "typeface-lobster": "0.0.72",
-    "typeface-open-sans": "0.0.75"
+    "typeface-open-sans": "0.0.75",
+    "webpack": "^4.44.1"
   },
   "scripts": {
     "start": "NODE_PATH=./src react-scripts start",
@@ -50,7 +55,8 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "lint:check": "eslint . --ext=js,jsx;  exit 0",
     "lint:fix": "eslint . --ext=js,jsx --fix;  exit 0",
-    "build-package-css": "cp src/assets/css/material-dashboard-react.css dist/material-dashboard-react.css"
+    "build-package-css": "cp src/assets/css/material-dashboard-react.css dist/material-dashboard-react.css",
+    "webpack": "webpack"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -62,6 +68,8 @@
   "keywords": [],
   "author": "Tyler Pritchard <pritchard.tyler@gmail.com> (https://www.tylerrobertpritchard.com)",
   "license": "MIT",
+  "description": "elaina front end react app",
+  "main": "index.js",
   "bugs": {
     "url": "https://github.com/deeplawtechnology/issues"
   },

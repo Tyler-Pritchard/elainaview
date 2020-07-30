@@ -5,7 +5,7 @@
 /coverage
 
 # production
-#build
+#/build
 
 # development
 dev_server
