@@ -5,10 +5,10 @@
 /coverage
 
 # production
-#/build
+#build
 
 # development
-/dev_server
+dev_server
 
 # misc
 .DS_Store
