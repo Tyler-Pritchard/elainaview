@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Header from './common/Header';
-import Sidebar from './common/Sidebar';
-import Footer from './common/Footer';
+import Navbar from './Navbars/Navbar';
+import Sidebar from './Sidebar/Sidebar';
+import Footer from './Footer/Footer';
 import Home from './Home';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -51,7 +51,7 @@ class Main extends Component {
 
         return (
             <div>
-                <Header />
+                <Navbar />
                 <Sidebar />
                 <TransitionGroup>
                     {/* <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>  */}
