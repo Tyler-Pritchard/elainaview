@@ -1,35 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "47960452009ab0e7bc2382a52023b5ab",
+    "revision": "e087deb1332e259cdb024e1e12073316",
     "url": "/index.html"
   },
   {
-    "revision": "9bcd514bc20008b6acc0",
+    "revision": "3b267ef61c88b4a6951d",
     "url": "/static/css/2.81682fbf.chunk.css"
   },
   {
-    "revision": "cca020ba1ae664ec525b",
+    "revision": "ccb501635edaa91cf2bc",
     "url": "/static/css/main.484431b6.chunk.css"
   },
   {
-    "revision": "9bcd514bc20008b6acc0",
-    "url": "/static/js/2.82bf379e.chunk.js"
+    "revision": "3b267ef61c88b4a6951d",
+    "url": "/static/js/2.75cbff52.chunk.js"
   },
   {
     "revision": "f9b05ad6d9919e7953ead50f46667634",
-    "url": "/static/js/2.82bf379e.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.75cbff52.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cca020ba1ae664ec525b",
-    "url": "/static/js/main.42206161.chunk.js"
+    "revision": "ccb501635edaa91cf2bc",
+    "url": "/static/js/main.9d7c18d8.chunk.js"
   },
   {
     "revision": "f7bdf0cfc9ea0dd44285692948c2d84f",
-    "url": "/static/js/main.42206161.chunk.js.LICENSE.txt"
+    "url": "/static/js/main.9d7c18d8.chunk.js.LICENSE.txt"
   },
   {
     "revision": "75fb15bb123d15736bff",
     "url": "/static/js/runtime-main.1673ad2a.js"
+  },
+  {
+    "revision": "a85661a4b00411172b8c5458425d0c91",
+    "url": "/static/media/elaina_avatar.a85661a4.png"
   },
   {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
@@ -50,6 +54,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fee66e712a8a08eef5805a46892932ad",
     "url": "/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  {
+    "revision": "b844bbf7c9caa0275f8797472ec6c4e5",
+    "url": "/static/media/hero-img.b844bbf7.png"
   },
   {
     "revision": "02bba601716f9a0ff1e241a64cfe9b29",
@@ -290,10 +298,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8e9f0a3c5578a20733d5bad0e51c91fb",
     "url": "/static/media/sidebar-1.8e9f0a3c.jpg"
-  },
-  {
-    "revision": "310509c95512893dc661bd3a6b0d2a5d",
-    "url": "/static/media/sidebar-2.310509c9.jpg"
   },
   {
     "revision": "2503169017014036cf0dd0dd7c2a2b8a",
