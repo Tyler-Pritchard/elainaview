@@ -197,7 +197,7 @@ export default function UpgradeToPro() {
                         color="danger"
                         href="https://www.creative-tim.com/product/material-dashboard-pro-react?ref=mdr-upgrade-live"
                       >
-                        Upgrade to Pro
+                        Ask Elaina
                       </Button>
                     </td>
                   </tr>
