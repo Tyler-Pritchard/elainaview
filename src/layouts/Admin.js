@@ -15,8 +15,8 @@ import routes from "routes.js";
 
 import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
 
-import bgImage from "assets/img/hero-img.png";
-import logo from "assets/img/elaina_avatar.png";
+import bgImage from "assets/img/columns2.png";
+import logo from "assets/img/law-firm-logo-trans.png";
 let ps;
 
 const switchRoutes = (
