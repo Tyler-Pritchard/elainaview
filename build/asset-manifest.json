@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.484431b6.chunk.css",
-    "main.js": "/static/js/main.9d7c18d8.chunk.js",
-    "main.js.map": "/static/js/main.9d7c18d8.chunk.js.map",
+    "main.js": "/static/js/main.2576adfb.chunk.js",
+    "main.js.map": "/static/js/main.2576adfb.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1673ad2a.js",
     "runtime-main.js.map": "/static/js/runtime-main.1673ad2a.js.map",
     "static/css/2.81682fbf.chunk.css": "/static/css/2.81682fbf.chunk.css",
     "static/js/2.75cbff52.chunk.js": "/static/js/2.75cbff52.chunk.js",
     "static/js/2.75cbff52.chunk.js.map": "/static/js/2.75cbff52.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f1a3edbbaece3317175e3e515d091b57.js": "/precache-manifest.f1a3edbbaece3317175e3e515d091b57.js",
+    "precache-manifest.9d5851c028f741c5011267f89d9accde.js": "/precache-manifest.9d5851c028f741c5011267f89d9accde.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.81682fbf.chunk.css.map": "/static/css/2.81682fbf.chunk.css.map",
     "static/css/main.484431b6.chunk.css.map": "/static/css/main.484431b6.chunk.css.map",
     "static/js/2.75cbff52.chunk.js.LICENSE.txt": "/static/js/2.75cbff52.chunk.js.LICENSE.txt",
-    "static/js/main.9d7c18d8.chunk.js.LICENSE.txt": "/static/js/main.9d7c18d8.chunk.js.LICENSE.txt",
-    "static/media/elaina_avatar.png": "/static/media/elaina_avatar.a85661a4.png",
+    "static/js/main.2576adfb.chunk.js.LICENSE.txt": "/static/js/main.2576adfb.chunk.js.LICENSE.txt",
+    "static/media/columns2.png": "/static/media/columns2.15384972.png",
     "static/media/font-awesome.css": "/static/media/fontawesome-webfont.fee66e71.woff",
-    "static/media/hero-img.png": "/static/media/hero-img.b844bbf7.png",
+    "static/media/law-firm-logo-trans.png": "/static/media/law-firm-logo-trans.2e16a4cd.png",
     "static/media/index.css": "/static/media/roboto-latin-900-normal.bb1e4dc6.woff",
     "static/media/marc.jpg": "/static/media/marc.8880a65c.jpg",
     "static/media/sidebar-1.jpg": "/static/media/sidebar-1.8e9f0a3c.jpg",
@@ -29,6 +29,6 @@
     "static/css/2.81682fbf.chunk.css",
     "static/js/2.75cbff52.chunk.js",
     "static/css/main.484431b6.chunk.css",
-    "static/js/main.9d7c18d8.chunk.js"
+    "static/js/main.2576adfb.chunk.js"
   ]
 }

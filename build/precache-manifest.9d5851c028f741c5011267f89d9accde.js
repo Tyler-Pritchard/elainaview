@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e087deb1332e259cdb024e1e12073316",
+    "revision": "d26cfcf917e87b6636d62c9817b11a51",
     "url": "/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.81682fbf.chunk.css"
   },
   {
-    "revision": "ccb501635edaa91cf2bc",
+    "revision": "7bd58ca4d8cd6a850f41",
     "url": "/static/css/main.484431b6.chunk.css"
   },
   {
@@ -20,20 +20,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.75cbff52.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ccb501635edaa91cf2bc",
-    "url": "/static/js/main.9d7c18d8.chunk.js"
+    "revision": "7bd58ca4d8cd6a850f41",
+    "url": "/static/js/main.2576adfb.chunk.js"
   },
   {
     "revision": "f7bdf0cfc9ea0dd44285692948c2d84f",
-    "url": "/static/js/main.9d7c18d8.chunk.js.LICENSE.txt"
+    "url": "/static/js/main.2576adfb.chunk.js.LICENSE.txt"
   },
   {
     "revision": "75fb15bb123d15736bff",
     "url": "/static/js/runtime-main.1673ad2a.js"
   },
   {
-    "revision": "a85661a4b00411172b8c5458425d0c91",
-    "url": "/static/media/elaina_avatar.a85661a4.png"
+    "revision": "15384972c81a95704ae73308823f79c1",
+    "url": "/static/media/columns2.15384972.png"
   },
   {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
@@ -56,8 +56,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "b844bbf7c9caa0275f8797472ec6c4e5",
-    "url": "/static/media/hero-img.b844bbf7.png"
+    "revision": "2e16a4cd08476fe82a5ef91fbb7e8a7f",
+    "url": "/static/media/law-firm-logo-trans.2e16a4cd.png"
   },
   {
     "revision": "02bba601716f9a0ff1e241a64cfe9b29",
