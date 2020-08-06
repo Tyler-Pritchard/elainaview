@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 
 import imagine1 from "assets/img/sidebar-1.jpg";
-import imagine2 from "assets/img/hero-img.png";
+import imagine2 from "assets/img/columns2.png";
 import imagine3 from "assets/img/sidebar-3.jpg";
 import imagine4 from "assets/img/sidebar-4.jpg";
 

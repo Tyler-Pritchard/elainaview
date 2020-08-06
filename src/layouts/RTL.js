@@ -15,8 +15,8 @@ import routes from "routes.js";
 
 import styles from "assets/jss/material-dashboard-react/layouts/rtlStyle.js";
 
-import bgImage from "assets/img/hero-img.png";
-import logo from "assets/img/reactlogo.png";
+import bgImage from "assets/img/columns2.png";
+import logo from "assets/img/lawfirm-logo-trans.png";
 
 let ps;
 
