@@ -16,7 +16,7 @@ import routes from "routes.js";
 import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
 
 import bgImage from "assets/img/columns2.png";
-import logo from "assets/img/law-firm-logo-trans.png";
+import logo from "assets/img/law-firm-logo-trans_1732x1732.png";
 let ps;
 
 const switchRoutes = (
@@ -95,9 +95,9 @@ export default function Admin({ ...rest }) {
     <div className={classes.wrapper}>
       <Sidebar
         routes={routes}
-        logoText={"The Deep Technologies"}
+        //logoText={"Law Office Name"}
         logo={logo}
-        image={image}
+        image={logo}
         handleDrawerToggle={handleDrawerToggle}
         open={mobileOpen}
         color={color}
