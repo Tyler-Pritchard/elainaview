@@ -12,6 +12,7 @@ import imagine4 from "assets/img/sidebar-4.jpg";
 
 import Button from "components/CustomButtons/Button.js";
 
+
 export default function FixedPlugin(props) {
   const [classes, setClasses] = React.useState("dropdown show");
   const [bg_checked, setBg_checked] = React.useState(true);
@@ -27,7 +28,7 @@ export default function FixedPlugin(props) {
     >
       <div id="fixedPluginClasses" className={props.fixedClasses}>
         <div onClick={handleClick}>
-          <i className="fa fa-cog fa-2x" />
+          <i className="fa fa-comment fa-2x" />
         </div>
         <ul className="dropdown-menu">
           <li className="header-title">SIDEBAR FILTERS</li>
