@@ -13,7 +13,7 @@ import Divider from "@material-ui/core/Divider";
 // @material-ui/icons
 import Person from "@material-ui/icons/Person";
 import Notifications from "@material-ui/icons/Notifications";
-import Dashboard from "@material-ui/icons/Dashboard";
+import ChatIcon from "@material-ui/icons/Chat";
 import Search from "@material-ui/icons/Search";
 // core components
 import CustomInput from "components/CustomInput/CustomInput.js";
@@ -69,12 +69,12 @@ export default function AdminNavbarLinks() {
         color={window.innerWidth > 959 ? "transparent" : "white"}
         justIcon={window.innerWidth > 959}
         simple={!(window.innerWidth > 959)}
-        aria-label="Dashboard"
+        aria-label="ChatIcon"
         className={classes.buttonLink}
       >
-        <Dashboard className={classes.icons} />
+        <ChatIcon className={classes.icons} />
         <Hidden mdUp implementation="css">
-          <p className={classes.linkText}>Dashboard</p>
+          <p className={classes.linkText}>Chat</p>
         </Hidden>
       </Button>
       <div className={classes.manager}>
