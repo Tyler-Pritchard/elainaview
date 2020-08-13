@@ -61,15 +61,16 @@ const sidebarStyle = theme => ({
     }
   },
   logo: {
+    height: "18vh",
     position: "relative",
-    padding: "15px 15px",
+    padding: "0px 10px 0px 50px",
     zIndex: "4",
     "&:after": {
       content: '""',
       position: "absolute",
       bottom: "0",
 
-      height: "1px",
+      height: "3px",
       right: "15px",
       width: "calc(100% - 30px)",
       backgroundColor: "rgba(" + hexToRgb(grayColor[6]) + ", 0.3)"
@@ -82,7 +83,7 @@ const sidebarStyle = theme => ({
     display: "block",
     fontSize: "18px",
     textAlign: "left",
-    fontWeight: "400",
+    fontWeight: "600",
     lineHeight: "30px",
     textDecoration: "none",
     backgroundColor: "transparent",
@@ -101,8 +102,8 @@ const sidebarStyle = theme => ({
     marginRight: "15px"
   },
   img: {
-    width: "35px",
-    top: "22px",
+    width: "135px",
+    top: "0px",
     position: "absolute",
     verticalAlign: "middle",
     border: "0"
@@ -115,7 +116,7 @@ const sidebarStyle = theme => ({
     display: "block",
     top: "0",
     left: "0",
-    backgroundSize: "cover",
+    backgroundSize: "contain",
     backgroundPosition: "center center",
     "&:after": {
       position: "absolute",
@@ -125,11 +126,11 @@ const sidebarStyle = theme => ({
       content: '""',
       display: "block",
       background: blackColor,
-      opacity: ".8"
+      opacity: ".7"
     }
   },
   list: {
-    marginTop: "20px",
+    marginTop: "40px",
     paddingLeft: "0",
     paddingTop: "0",
     paddingBottom: "0",
@@ -157,11 +158,11 @@ const sidebarStyle = theme => ({
     ...defaultFont
   },
   itemIcon: {
-    width: "24px",
-    height: "30px",
-    fontSize: "24px",
+    width: "28px",
+    height: "34px",
+    fontSize: "26px",
     lineHeight: "30px",
-    float: "left",
+    float: "right",
     marginRight: "15px",
     textAlign: "center",
     verticalAlign: "middle",
@@ -170,13 +171,13 @@ const sidebarStyle = theme => ({
   itemIconRTL: {
     marginRight: "3px",
     marginLeft: "15px",
-    float: "right"
+    float: "left"
   },
   itemText: {
     ...defaultFont,
     margin: "0",
     lineHeight: "30px",
-    fontSize: "14px",
+    fontSize: "20px",
     color: whiteColor
   },
   itemTextRTL: {
