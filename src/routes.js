@@ -19,15 +19,13 @@
 import Dashboard from "@material-ui/icons/Dashboard";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
-import Notifications from "@material-ui/icons/Notifications";
+// import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
 
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import Typography from "views/Typography/Typography.js";
-import Icons from "views/Icons/Icons.js"
 import NotificationsPage from "views/Notifications/Notifications.js";
-import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.js";
 // core components/views for RTL layout
 import RTLPage from "views/RTLPage/RTLPage.js";
 
@@ -54,14 +52,6 @@ const dashboardRoutes = [
     rtlName: "إخطارات",
     icon: CalendarTodayIcon,
     component: NotificationsPage,
-    layout: "/admin"
-  },
-  {
-    path: "/upgrade-to-pro",
-    name: "Chat with ELAINA",
-    rtlName: "التطور للاحترافية",
-    icon: Unarchive,
-    component: UpgradeToPro,
     layout: "/admin"
   }
 ];
