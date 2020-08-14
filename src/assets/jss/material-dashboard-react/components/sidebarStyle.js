@@ -64,6 +64,7 @@ const sidebarStyle = theme => ({
     height: "18vh",
     position: "relative",
     padding: "0px 10px 0px 25px",
+    marginBottom: "5vh",
     zIndex: "4",
     "&:after": {
       content: '""',
@@ -79,12 +80,12 @@ const sidebarStyle = theme => ({
   logoLink: {
     ...defaultFont,
     textTransform: "uppercase",
-    padding: "5px 0",
+    padding: "8px 0",
     display: "block",
     fontSize: "18px",
     textAlign: "left",
     fontWeight: "600",
-    lineHeight: "30px",
+    lineHeight: "35px",
     textDecoration: "none",
     backgroundColor: "transparent",
     "&,&:hover": {
@@ -124,7 +125,7 @@ const sidebarStyle = theme => ({
       content: '""',
       display: "block",
       background: blackColor,
-      opacity: ".5"
+      opacity: ".6"
     }
   },
   list: {
