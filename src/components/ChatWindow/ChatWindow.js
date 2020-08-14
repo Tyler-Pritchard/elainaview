@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import {Launcher} from 'react-chat-window'
+import React, { Component } from 'react';
+import {Launcher} from 'react-chat-window';
  
 class ChatWindow extends Component {
  
@@ -29,7 +29,7 @@ class ChatWindow extends Component {
   }
  
   render() {
-    return (<div>
+    return (
       <Launcher
         agentProfile={{
           teamName: 'Elaina Chat',
@@ -39,7 +39,7 @@ class ChatWindow extends Component {
         messageList={this.state.messageList}
         showEmoji
       />
-    </div>)
+    )
   }
 }
 

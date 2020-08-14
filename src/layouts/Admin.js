@@ -16,7 +16,7 @@ import routes from "routes.js";
 
 import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
 
-import bgImage from "assets/img/columns2.png";
+import bgImage from "assets/img/supreme-court-building-1209701_1920.jpg";
 import logo from "assets/img/law-firm-logo-trans_1732x1732.png";
 let ps;
 
@@ -98,7 +98,7 @@ export default function Admin({ ...rest }) {
         routes={routes}
         //logoText={"Law Office Name"}
         logo={logo}
-        image={logo}
+        image={bgImage}
         handleDrawerToggle={handleDrawerToggle}
         open={mobileOpen}
         color={color}

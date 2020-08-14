@@ -7,6 +7,7 @@ import {
   successColor,
   warningColor,
   dangerColor,
+  blackColor,
   whiteColor,
   grayColor
 } from "assets/jss/material-dashboard-react.js";
@@ -19,7 +20,7 @@ const headerStyle = () => ({
     marginBottom: "0",
     position: "absolute",
     width: "100%",
-    paddingTop: "10px",
+    paddingTop: "0px",
     zIndex: "1029",
     color: grayColor[7],
     border: "0",
@@ -31,7 +32,9 @@ const headerStyle = () => ({
   },
   container: {
     ...container,
-    minHeight: "50px"
+    minHeight: "50px",
+    background: blackColor,
+    opacity: ".6"
   },
   flex: {
     flex: 1
