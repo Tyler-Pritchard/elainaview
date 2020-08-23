@@ -122,7 +122,7 @@ export default function Notifications() {
   };
   return (
     <Card>
-      <CardHeader color="primary">
+      {/* <CardHeader color="primary">
         <h4 className={classes.cardTitleWhite}>Notifications</h4>
         <p className={classes.cardCategoryWhite}>
           Handcrafted by our friends from{" "}
@@ -340,7 +340,7 @@ export default function Notifications() {
             </GridContainer>
           </GridItem>
         </GridContainer>
-      </CardBody>
+      </CardBody> */}
     </Card>
   );
 }
