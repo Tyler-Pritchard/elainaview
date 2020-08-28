@@ -3,7 +3,7 @@ import { createForms } from 'react-redux-form';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import { User } from './reducers/user';
-import { Chat } from './reducers/chat';
+import { Chats } from './reducers/chats';
 import { DocApprove } from './reducers/docApprove';
 import { MyForm } from './reducers/forms/myForm';
 
@@ -11,7 +11,7 @@ export const ConfigureStore = () => {
     const store = createStore(
         combineReducers({
             user: User,
-            chat: Chat,
+            chats: Chats,
             docApprove: DocApprove,
             ...createForms({
                 myForm: MyForm

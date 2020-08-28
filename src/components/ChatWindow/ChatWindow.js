@@ -3,8 +3,8 @@ import {Launcher} from 'react-chat-window';
  
 class ChatWindow extends Component {
  
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       messageList: []
     };
