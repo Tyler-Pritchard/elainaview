@@ -1,9 +1,9 @@
 import * as ActionTypes from '../ActionTypes';
 
-export const Chat = (state = { 
+export const Chats = (state = { 
     isLoading: true,
     errMess: null,
-    chat: [] 
+    chats: [] 
 }, action) => {
     switch (action.type) {
         case ActionTypes.ADD_CHAT:
