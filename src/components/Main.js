@@ -5,7 +5,7 @@ import Footer from './Footer/Footer';
 import Home from './Home';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchChat, fetchDocApprove, fetchUser } from '../redux/ActionCreators';
+import { fetchChat, fetchDocApprove, fetchUser } from '../redux/actions/ActionCreators';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const mapStateToProps = state => {

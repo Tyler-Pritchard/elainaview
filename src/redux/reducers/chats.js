@@ -1,6 +1,6 @@
-import * as ActionTypes from '../ActionTypes';
+import * as ActionTypes from '../actions/ActionTypes';
 
-export const Chats = (state = { 
+export default function (state = { 
     isLoading: true,
     errMess: null,
     chats: [] 
