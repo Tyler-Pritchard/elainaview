@@ -53,6 +53,25 @@ const dashboardRoutes = [
     icon: CalendarTodayIcon,
     component: NotificationsPage,
     layout: "/admin"
+  },
+  {
+    path: "/signout",
+    name: "Signout",
+    rtlName: "إخطارات",
+    icon: CalendarTodayIcon,
+    component: SignoutPage,
+    layout: "/signout"
+  }
+];
+
+const AuthRoutes = [
+  {
+    path: "/login",
+    name: "Login",
+    rtlName: "إخطارات",
+    icon: CalendarTodayIcon,
+    component: LoginPage,
+    layout: "/login"
   }
 ];
 
