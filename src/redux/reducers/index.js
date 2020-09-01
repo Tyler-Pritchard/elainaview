@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
-import auth from './auth';
-import { chats } from './chats';
-import user from './user';
+import { Auth } from './auth';
+import { Chats } from './chats';
+import { User } from './user';
 
 
 export default combineReducers({
-    auth: auth,
-    chats: chats,
-    user: user
+    // auth: Auth,
+    // chats: Chats,
+    // user: User
 });

@@ -1,10 +1,10 @@
 import * as ActionTypes from '../actions/ActionTypes';
 
-export default function (state = { 
-    isLoading: true,
-    errMess: null,
-    chats: [] 
-}, action) => {
+export const Chats = function(state = { 
+        isLoading: true,
+        errMess: null,
+        chats: [] 
+    }, action) {
     switch (action.type) {
         case ActionTypes.ADD_CHAT:
             return {...state, isLoading: false, errMess: null, chat: action.payload};
