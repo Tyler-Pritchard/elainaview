@@ -16,7 +16,7 @@ import routes from "routes.js";
 
 import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
 
-import bgImage from "assets/img/supreme-court-building-1209701_1920.jpg";
+import bgImage from "assets/img/sidebar2.png";
 import logo from "assets/img/law-firm-logo-trans_1732x1732.png";
 let ps;
 

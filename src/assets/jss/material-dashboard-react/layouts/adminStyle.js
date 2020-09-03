@@ -9,7 +9,7 @@ const bkg = img;
 const appStyle = theme => ({
   wrapper: {
     position: "relative",
-    border: "3px solid green",
+    //border: "3px solid green",
     top: "0",
     height: "100vh"
   },
@@ -26,13 +26,14 @@ const appStyle = theme => ({
     overflowScrolling: "touch"
   },
   content: {
-    border: "2px solid red",
+    //border: "2px solid red",
     backgroundImage: `url(${bkg})`,
     backgroundSize: "contain",
     backgroundAttachment: "fixed",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgrounndBlend: "luminosity",
+    opacity: ".1",
     marginTop: "70px",
     padding: "30px 15px",
     minHeight: "calc(100vh - 123px)"
