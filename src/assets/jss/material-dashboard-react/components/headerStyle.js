@@ -12,6 +12,10 @@ import {
   grayColor
 } from "assets/jss/material-dashboard-react.js";
 
+import img from "../../../img/navbar2.png";
+
+const bkg = img;
+
 const headerStyle = () => ({
   appBar: {
     backgroundColor: "transparent",
@@ -22,19 +26,20 @@ const headerStyle = () => ({
     width: "100%",
     paddingTop: "0px",
     zIndex: "1029",
-    color: grayColor[7],
+    color: grayColor[4],
     border: "0",
     borderRadius: "3px",
     padding: "10px 0",
     transition: "all 150ms ease 0s",
     minHeight: "50px",
-    display: "block"
+    display: "block",
   },
   container: {
     ...container,
+    backgroundImage: `url(${bkg})`,
     minHeight: "50px",
     background: blackColor,
-    opacity: ".6"
+    opacity: ".8"
   },
   flex: {
     flex: 1
