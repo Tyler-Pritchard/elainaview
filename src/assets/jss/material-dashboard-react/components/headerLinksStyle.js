@@ -10,8 +10,10 @@ const headerLinksStyle = theme => ({
   ...dropdownStyle(theme),
   search: {
     "& > div": {
+      color: whiteColor,
       marginTop: "0"
     },
+
     [theme.breakpoints.down("sm")]: {
       margin: "10px 15px !important",
       float: "none !important",
@@ -29,7 +31,8 @@ const headerLinksStyle = theme => ({
     zIndex: "4",
     ...defaultFont,
     fontSize: "14px",
-    margin: "0px"
+    margin: "0px",
+    color: whiteColor
   },
   buttonLink: {
     [theme.breakpoints.down("sm")]: {
@@ -52,8 +55,8 @@ const headerLinksStyle = theme => ({
       },
       "& > span": {
         justifyContent: "flex-start",
-        width: "100%"
-      }
+        width: "100%",
+      },
     }
   },
   searchButton: {
@@ -69,7 +72,7 @@ const headerLinksStyle = theme => ({
   },
   searchIcon: {
     width: "17px",
-    zIndex: "4"
+    zIndex: "4",
   },
   notifications: {
     zIndex: "4",
