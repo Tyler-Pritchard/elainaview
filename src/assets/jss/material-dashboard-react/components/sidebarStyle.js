@@ -115,7 +115,8 @@ const sidebarStyle = theme => ({
     display: "block",
     top: "0",
     left: "0",
-    backgroundSize: "fit",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
     "&:after": {
       position: "absolute",
