@@ -1,5 +1,4 @@
 import {
-  container,
   defaultFont,
   primaryColor,
   defaultBoxShadow,
@@ -9,7 +8,6 @@ import {
   dangerColor,
   blackColor,
   whiteColor,
-  grayColor
 } from "assets/jss/material-dashboard-react.js";
 
 import img from "../../../img/navbar2.png";
@@ -26,20 +24,32 @@ const headerStyle = () => ({
     width: "100%",
     paddingTop: "0px",
     zIndex: "1029",
-    color: grayColor[4],
+    color: whiteColor,
     border: "0",
     borderRadius: "3px",
     padding: "10px 0",
     transition: "all 150ms ease 0s",
     minHeight: "50px",
-    display: "block",
+    display: "block"
   },
   container: {
-    ...container,
+    paddingRight: "15px",
+    paddingLeft: "0",
+    marginRight: "auto",
+    marginLeft: "0",
     backgroundImage: `url(${bkg})`,
     minHeight: "50px",
     background: blackColor,
-    opacity: ".8"
+    opacity: ".98",
+    "&:after": {
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      content: '""',
+      display: "block",
+      background: blackColor,
+      opacity: ".6"
+    },
   },
   flex: {
     flex: 1
