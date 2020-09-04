@@ -60,87 +60,90 @@ const sidebarStyle = theme => ({
       right: "auto !important"
     }
   },
-  logo: {
-    height: "18vh",
-    position: "relative",
-    padding: "0px 10px 0px 25px",
-    marginBottom: "5vh",
-    zIndex: "4",
-    "&:after": {
-      content: '""',
-      position: "absolute",
-      bottom: "0",
+  // logo: {
+  //   height: "18vh",
+  //   position: "relative",
+  //   padding: "0px 10px 0px 25px",
+  //   marginBottom: "5vh",
+    // zIndex: "4",
+    // "&:after": {
+    //   content: '""',
+    //   position: "absolute",
+    //   bottom: "0",
 
-      height: "3px",
-      right: "15px",
-      width: "calc(100% - 30px)",
-      backgroundColor: "rgba(" + hexToRgb(grayColor[2]) + ", 0.3)"
-    }
-  },
-  logoLink: {
-    ...defaultFont,
-    textTransform: "uppercase",
-    padding: "8px 0",
+    //   height: "3px",
+    //   right: "15px",
+    //   width: "calc(100% - 30px)",
+    //   backgroundColor: "rgba(" + hexToRgb(grayColor[2]) + ", 0.3)"
+    // }
+  //},
+  // logoLink: {
+  //   ...defaultFont,
+  //   textTransform: "uppercase",
+  //   padding: "8px 0",
+  //   display: "block",
+  //   fontSize: "18px",
+  //   textAlign: "left",
+  //   fontWeight: "600",
+  //   lineHeight: "35px",
+  //   textDecoration: "none",
+  //   backgroundColor: "transparent",
+  //   "&,&:hover": {
+    //     color: whiteColor
+    //   }
+    // },
+    // logoLinkRTL: {
+      //   textAlign: "right"
+      // },
+      // logoImage: {
+        //   width: "30px",
+        //   display: "inline-block",
+        //   maxHeight: "30px"
+        // },
+        // img: {
+          //   width: "200px",
+          //   top: "0px",
+          //   position: "absolute",
+          //   verticalAlign: "middle",
+          //   border: "0"
+          // },
+          background: {
+            position: "absolute",
+            zIndex: "1",
+            height: "100%",
+            width: "100%",
+            display: "block",
+            top: "0",
+            left: "0",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center center",
+            "&:after": {
+              position: "absolute",
+              zIndex: "3",
+              width: "100%",
+              height: "100%",
+              content: '""',
+              display: "block",
+              background: blackColor,
+              opacity: ".6"
+            }
+          },
+          list: {
+              // border: "3px solid red",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+            height: "75%",
+            paddingLeft: "0",
+            paddingTop: "8vh",
+            listStyle: "none",
+            position: "unset"
+          },
+          item: {
+            position: "relative",
     display: "block",
-    fontSize: "18px",
-    textAlign: "left",
-    fontWeight: "600",
-    lineHeight: "35px",
-    textDecoration: "none",
-    backgroundColor: "transparent",
-    "&,&:hover": {
-      color: whiteColor
-    }
-  },
-  logoLinkRTL: {
-    textAlign: "right"
-  },
-  logoImage: {
-    width: "30px",
-    display: "inline-block",
-    maxHeight: "30px"
-  },
-  img: {
-    width: "200px",
-    top: "0px",
-    position: "absolute",
-    verticalAlign: "middle",
-    border: "0"
-  },
-  background: {
-    position: "absolute",
-    zIndex: "1",
-    height: "100%",
-    width: "100%",
-    display: "block",
-    top: "0",
-    left: "0",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center center",
-    "&:after": {
-      position: "absolute",
-      zIndex: "3",
-      width: "100%",
-      height: "100%",
-      content: '""',
-      display: "block",
-      background: blackColor,
-      opacity: ".6"
-    }
-  },
-  list: {
-    marginTop: "40px",
-    paddingLeft: "0",
-    paddingTop: "0",
-    paddingBottom: "0",
-    marginBottom: "0",
-    listStyle: "none",
-    position: "unset"
-  },
-  item: {
-    position: "relative",
-    display: "block",
+    margin: "0 0 8vh 0",
     textDecoration: "none",
     "&:hover,&:focus,&:visited,&": {
       color: whiteColor
@@ -149,11 +152,11 @@ const sidebarStyle = theme => ({
   itemLink: {
     width: "auto",
     transition: "all 300ms linear",
-    margin: "10px 15px 0",
+    margin: "5px 15px 0",
     borderRadius: "3px",
     position: "relative",
     display: "block",
-    padding: "10px 15px",
+    padding: "5px 15px",
     backgroundColor: "transparent",
     ...defaultFont
   },
@@ -177,7 +180,7 @@ const sidebarStyle = theme => ({
     ...defaultFont,
     margin: "0",
     lineHeight: "30px",
-    fontSize: "20px",
+    fontSize: "26px",
     color: whiteColor
   },
   itemTextRTL: {
@@ -289,13 +292,6 @@ const sidebarStyle = theme => ({
     width: "260px",
     zIndex: "4",
     overflowScrolling: "touch"
-  },
-  activePro: {
-    [theme.breakpoints.up("md")]: {
-      position: "absolute",
-      width: "100%",
-      bottom: "13px"
-    }
   }
 });
 
