@@ -26,14 +26,11 @@ import Unarchive from "@material-ui/icons/Unarchive";
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import Typography from "views/Typography/Typography.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
-// core components/views for RTL layout
-import RTLPage from "views/RTLPage/RTLPage.js";
 
 const dashboardRoutes = [
   {
     path: "/dashboard",
     name: "Dashboard",
-    rtlName: "لوحة القيادة",
     icon: Dashboard,
     component: DashboardPage,
     layout: "/admin"
@@ -41,7 +38,6 @@ const dashboardRoutes = [
   {
     path: "/typography",
     name: "Documents",
-    rtlName: "طباعة",
     icon: LibraryBooks,
     component: Typography,
     layout: "/admin"
@@ -49,7 +45,6 @@ const dashboardRoutes = [
   {
     path: "/notifications",
     name: "Calendar",
-    rtlName: "إخطارات",
     icon: CalendarTodayIcon,
     component: NotificationsPage,
     layout: "/admin"
@@ -57,7 +52,6 @@ const dashboardRoutes = [
   // {
   //   path: "/signout",
   //   name: "Signout",
-  //   rtlName: "إخطارات",
   //   icon: CalendarTodayIcon,
   //   component: SignoutPage,
   //   layout: "/signout"
@@ -68,7 +62,6 @@ const dashboardRoutes = [
 //   {
 //     path: "/login",
 //     name: "Login",
-//     rtlName: "إخطارات",
 //     icon: CalendarTodayIcon,
 //     component: LoginPage,
 //     layout: "/login"

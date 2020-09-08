@@ -39,8 +39,7 @@ const headerStyle = () => ({
     marginLeft: "0",
     backgroundImage: `url(${bkg})`,
     minHeight: "50px",
-    background: blackColor,
-    opacity: ".98",
+    zIndex: "-1",
     "&:after": {
       position: "absolute",
       width: "100%",
@@ -48,7 +47,8 @@ const headerStyle = () => ({
       content: '""',
       display: "block",
       background: blackColor,
-      opacity: ".6"
+      opacity: ".6",
+      zIndex: "-1",
     },
   },
   flex: {
