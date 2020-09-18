@@ -5,7 +5,7 @@ import { User } from './user';
 
 
 export default combineReducers({
-    // auth: Auth,
-    // chats: Chats,
-    // user: User
+    auth: Auth,
+    chats: Chats,
+    user: User
 });
