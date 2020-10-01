@@ -121,16 +121,14 @@ const sidebarStyle = theme => ({
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-evenly",
-            height: "75%",
+            height: "50%",
             paddingLeft: "0",
-            paddingTop: "8vh",
             listStyle: "none",
             position: "unset"
           },
           item: {
             position: "relative",
             display: "block",
-            margin: "0 0 8vh 0",
             textDecoration: "none",
             "&:hover,&:focus,&:visited,&": {
               color: whiteColor
@@ -139,7 +137,7 @@ const sidebarStyle = theme => ({
   itemLink: {
     width: "auto",
     transition: "all 300ms linear",
-    margin: "5px 15px 0",
+    margin: "5px 15px",
     borderRadius: "3px",
     position: "relative",
     display: "block",
