@@ -26,7 +26,7 @@ import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import Typography from "views/Typography/Typography.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
-
+import Calendar from "views/Calendar/Calendar.js";
 const dashboardRoutes = [
   {
     path: "/dashboard",
@@ -43,10 +43,10 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/notifications",
+    path: "/calendar",
     name: "Calendar",
     icon: CalendarTodayIcon,
-    component: NotificationsPage,
+    component: Calendar,
     layout: "/admin"
   }
   // {

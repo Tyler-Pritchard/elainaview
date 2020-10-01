@@ -1,0 +1,28 @@
+.BigCal {
+    text-align: center;
+  }
+  
+  .BigCal-logo {
+    animation: BigCal-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+  
+  .BigCal-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .BigCal-title {
+    font-size: 1.5em;
+  }
+  
+  .BigCal-intro {
+    font-size: large;
+  }
+  
+  @keyframes BigCal-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
