@@ -118,6 +118,7 @@ const sidebarStyle = theme => ({
             }
           },
           list: {
+            border: "1px solid green",
               // border: "3px solid red",
             display: "flex",
             flexDirection: "column",

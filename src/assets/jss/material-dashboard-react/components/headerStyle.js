@@ -21,7 +21,7 @@ const headerStyle = () => ({
     borderBottom: "0",
     marginBottom: "0",
     position: "absolute",
-    width: "100%",
+    width: "85%",
     paddingTop: "0px",
     zIndex: "1029",
     color: whiteColor,

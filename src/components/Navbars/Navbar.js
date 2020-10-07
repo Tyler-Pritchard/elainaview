@@ -12,24 +12,13 @@ import Menu from "@material-ui/icons/Menu";
 // core components
 import AdminNavbarLinks from "./AdminNavbarLinks.js";
 import RTLNavbarLinks from "./RTLNavbarLinks.js";
-import Button from "components/CustomButtons/Button.js";
-
 import styles from "assets/jss/material-dashboard-react/components/headerStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
   const classes = useStyles();
-  function makeBrand() {
-    var name;
-    props.routes.map(prop => {
-      if (window.location.href.indexOf(prop.layout + prop.path) !== -1) {
-        name = props.rtlActive ? prop.rtlName : prop.name;
-      }
-      return null;
-    });
-    return name;
-  }
+  
   const { color } = props;
   const appBarClasses = classNames({
     [" " + classes[color]]: color
@@ -37,9 +26,7 @@ export default function Header(props) {
   return (
     <AppBar className={classes.appBar + appBarClasses}>
       <Toolbar className={classes.container}>
-        <div className={classes.flex}>
-          
-        </div>
+        <div className={classes.flex} />
         <Hidden smDown implementation="css">
           {props.rtlActive ? <RTLNavbarLinks /> : <AdminNavbarLinks />}
         </Hidden>
