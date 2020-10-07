@@ -67,7 +67,7 @@ export default function Admin({ ...rest }) {
     setMobileOpen(!mobileOpen);
   };
   const getRoute = () => {
-    return window.location.pathname !== "/admin/maps";
+    return window.location.pathname !== "/admin/";
   };
   const resizeFunction = () => {
     if (window.innerWidth >= 960) {
@@ -110,18 +110,17 @@ export default function Admin({ ...rest }) {
           {...rest}
         />
       <div className={classes.mainPanel} ref={mainPanel}>
-      <div className="mainBkg">
-        {/* On the /maps route we want the map to be on full screen - this is not possible if the content and conatiner classes are present because they have some paddings which would make the map smaller */}
-        <div className={classes.container}>
+        <div className="mainBkg">
+          <div className={classes.container}>
        
             {getRoute() ? (
               <div>{switchRoutes}</div>
               ) : (
                 <div className={classes.map}>{switchRoutes}</div>
                 )}
-         </div>
-                <ChatWindow />
- </div>
+          <ChatWindow />
+          </div>
+        </div>
       {getRoute() ? <Footer /> : null}
       </div>
     </div>

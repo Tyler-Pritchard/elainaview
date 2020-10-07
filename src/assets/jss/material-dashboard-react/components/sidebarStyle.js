@@ -44,6 +44,7 @@ const sidebarStyle = theme => ({
       borderTop: "none",
       textAlign: "left",
       paddingRight: "0px",
+      paddingTop: "0px",
       paddingLeft: "0",
       transform: `translate3d(${drawerWidth}px, 0, 0)`,
       ...transition
