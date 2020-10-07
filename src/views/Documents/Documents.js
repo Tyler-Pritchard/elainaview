@@ -9,49 +9,16 @@ import CardBody from "components/Card/CardBody.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
-const styles = {
-  typo: {
-    paddingLeft: "25%",
-    marginBottom: "40px",
-    position: "relative"
-  },
-  note: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-    bottom: "10px",
-    color: "#c0c1c2",
-    display: "block",
-    fontWeight: "400",
-    fontSize: "13px",
-    lineHeight: "13px",
-    left: "0",
-    marginLeft: "20px",
-    position: "absolute",
-    width: "260px"
-  },
-  cardCategoryWhite: {
-    color: "rgba(255,255,255,.62)",
-    margin: "0",
-    fontSize: "14px",
-    marginTop: "0",
-    marginBottom: "0"
-  },
-  cardTitleWhite: {
-    color: "#FFFFFF",
-    marginTop: "0px",
-    minHeight: "auto",
-    fontWeight: "300",
-    fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
-    marginBottom: "3px",
-    textDecoration: "none"
-  }
-};
+import styles from "assets/jss/material-dashboard-react/views/documentsStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function Documents() {
   const classes = useStyles();
   return (
-    <GridContainer>
+    <div className={classes.mainBkg}>
+
+    <GridContainer style={styles.content}>
         <GridItem>
             <Card>
                 <CardHeader color="primary">
@@ -74,5 +41,21 @@ export default function Documents() {
             </Card>
         </GridItem>
     </GridContainer>
+    </div>
   );
 }
+
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     height: '100vh',
+//   },
+//   image: {
+//     height: '90vh',
+//     backgroundImage: 'url(/Users/tylerpritchard/Desktop/elainaview/src/assets/img/law-firm-logo-trans.png)',
+//     backgroundRepeat: 'no-repeat',
+//     backgroundColor:
+//       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+//     backgroundSize: 'cover',
+//     backgroundPosition: 'center',
+//   }
+// }));

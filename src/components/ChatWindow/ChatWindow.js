@@ -30,6 +30,7 @@ class ChatWindow extends Component {
  
   render() {
     return (
+      
       <Launcher
         agentProfile={{
           teamName: 'Elaina Chat',

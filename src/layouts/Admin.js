@@ -11,7 +11,7 @@ import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 import ChatWindow from "components/ChatWindow/ChatWindow";
 
-
+import '../App.css';
 import routes from "routes.js";
 
 import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
@@ -46,13 +46,13 @@ export default function Admin({ ...rest }) {
   // ref to help us initialize PerfectScrollbar on windows devices
   const mainPanel = React.createRef();
   // states and functions
-  const [image, setImage] = React.useState(bgImage);
+  //const [image, setImage] = React.useState(bgImage);
   const [color, setColor] = React.useState("blue");
   const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const handleImageClick = image => {
-    setImage(image);
-  };
+  // const handleImageClick = image => {
+  //   setImage(image);
+  // };
   const handleColorClick = color => {
     setColor(color);
   };
@@ -94,7 +94,7 @@ export default function Admin({ ...rest }) {
   }, [mainPanel]);
   return (
     <div className={classes.wrapper}>
-      <Sidebar
+    <Sidebar
         routes={routes}
         //logoText={"Law Office Name"}
         logo={logo}
@@ -104,23 +104,25 @@ export default function Admin({ ...rest }) {
         color={color}
         {...rest}
       />
-      <div className={classes.mainPanel} ref={mainPanel}>
         <Navbar
           routes={routes}
           handleDrawerToggle={handleDrawerToggle}
           {...rest}
         />
-          <ChatWindow />
-  
+      <div className={classes.mainPanel} ref={mainPanel}>
+      <div className="mainBkg">
         {/* On the /maps route we want the map to be on full screen - this is not possible if the content and conatiner classes are present because they have some paddings which would make the map smaller */}
-        {getRoute() ? (
-          <div className={classes.content}>
-            <div className={classes.container}>{switchRoutes}</div>
-          </div>
-        ) : (
-          <div className={classes.map}>{switchRoutes}</div>
-        )}
-        {getRoute() ? <Footer /> : null}
+        <div className={classes.container}>
+       
+            {getRoute() ? (
+              <div>{switchRoutes}</div>
+              ) : (
+                <div className={classes.map}>{switchRoutes}</div>
+                )}
+         </div>
+                <ChatWindow />
+ </div>
+      {getRoute() ? <Footer /> : null}
       </div>
     </div>
   );

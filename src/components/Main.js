@@ -62,7 +62,6 @@ class Main extends Component {
                     {/* </CSSTransition> */}
                 </TransitionGroup>
                 <Footer />
-            content
             </div>
         );
     }

@@ -18,7 +18,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // import Cloud from "@material-ui/icons/Cloud";
 // // core components
 // import GridItem from "components/Grid/GridItem.js";
-// import GridContainer from "components/Grid/GridContainer.js";
+import GridContainer from "components/Grid/GridContainer.js";
 // import Table from "components/Table/Table.js";
 // import Tasks from "components/Tasks/Tasks.js";
 // import CustomTabs from "components/CustomTabs/CustomTabs.js";
@@ -39,14 +39,14 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
 
-// const useStyles = makeStyles(styles);
+const useStyles = makeStyles(styles);
 
 export default function Dashboard() {
-  // const classes = useStyles();
+  const classes = useStyles();
   return (
-    <div>
-      {/* <GridContainer>
-        <GridItem xs={12} sm={6} md={3}>
+    <div className={classes.mainBkg}>
+      <GridContainer >
+        {/* <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
@@ -258,8 +258,8 @@ export default function Dashboard() {
               />
             </CardBody>
           </Card>
-        </GridItem>
-      </GridContainer> */}
+        </GridItem>*/}
+      </GridContainer> 
     </div>
   );
 }
