@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Launcher} from 'react-chat-window';
+
+import avatar from './elaina_avatar2.jpg';
  
 class ChatWindow extends Component {
  
@@ -34,7 +36,7 @@ class ChatWindow extends Component {
       <Launcher
         agentProfile={{
           teamName: 'Elaina',
-          imageUrl: 'zz'
+          imageUrl: `${avatar}`
         }}
         onMessageWasSent={this._onMessageWasSent.bind(this)}
         messageList={this.state.messageList}
