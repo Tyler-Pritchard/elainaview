@@ -6,13 +6,11 @@ import {
 
 const appStyle = theme => ({
   wrapper: {
-    border: "2px solid green",
     position: "relative",
     top: "0",
     height: "100vh"
   },
   mainPanel: {
-    border: "2px solid orangered",
     [theme.breakpoints.up("md")]: {
       width: `calc(100% - ${drawerWidth}px)`
     },

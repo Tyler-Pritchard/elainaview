@@ -118,19 +118,19 @@ const sidebarStyle = theme => ({
             }
           },
           list: {
-            border: "1px solid green",
-              // border: "3px solid red",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-evenly",
+            justifyContent: "flex-start",
             height: "50%",
             paddingLeft: "0",
+            paddingTop: "3vh",
             listStyle: "none",
             position: "unset"
           },
           item: {
             position: "relative",
             display: "block",
+            marginTop: "2vh",
             textDecoration: "none",
             "&:hover,&:focus,&:visited,&": {
               color: whiteColor
