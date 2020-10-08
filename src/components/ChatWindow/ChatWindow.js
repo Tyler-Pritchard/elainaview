@@ -34,7 +34,7 @@ class ChatWindow extends Component {
       <Launcher
         agentProfile={{
           teamName: 'Elaina',
-          imageUrl: './elaina_avatar2.png'
+          imageUrl: 'zz'
         }}
         onMessageWasSent={this._onMessageWasSent.bind(this)}
         messageList={this.state.messageList}
