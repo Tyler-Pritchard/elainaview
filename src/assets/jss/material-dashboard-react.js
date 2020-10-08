@@ -47,6 +47,9 @@ const hexToRgb = input => {
   );
 };
 
+//******** BACKGROUND IMAGE */
+const bkgImg = 'url(../../../img/law-firm-logo-trans.png)';
+
 // ##############################
 // // // Variables - Styles that are used on more than one component
 // #############################
@@ -298,5 +301,6 @@ export {
   title,
   cardTitle,
   cardSubtitle,
-  cardLink
+  cardLink,
+  bkgImg
 };

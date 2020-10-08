@@ -44,6 +44,7 @@ const sidebarStyle = theme => ({
       borderTop: "none",
       textAlign: "left",
       paddingRight: "0px",
+      paddingTop: "0px",
       paddingLeft: "0",
       transform: `translate3d(${drawerWidth}px, 0, 0)`,
       ...transition
@@ -117,20 +118,19 @@ const sidebarStyle = theme => ({
             }
           },
           list: {
-              // border: "3px solid red",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-evenly",
-            height: "75%",
+            justifyContent: "flex-start",
+            height: "50%",
             paddingLeft: "0",
-            paddingTop: "8vh",
+            paddingTop: "3vh",
             listStyle: "none",
             position: "unset"
           },
           item: {
             position: "relative",
             display: "block",
-            margin: "0 0 8vh 0",
+            marginTop: "2vh",
             textDecoration: "none",
             "&:hover,&:focus,&:visited,&": {
               color: whiteColor
@@ -139,7 +139,7 @@ const sidebarStyle = theme => ({
   itemLink: {
     width: "auto",
     transition: "all 300ms linear",
-    margin: "5px 15px 0",
+    margin: "5px 15px",
     borderRadius: "3px",
     position: "relative",
     display: "block",

@@ -5,7 +5,19 @@ import {
   hexToRgb
 } from "assets/jss/material-dashboard-react.js";
 
+import img from "../../../img/law-firm-logo-trans2.png";
+const bkg = img;
+
 const dashboardStyle = {
+  mainBkg: {
+    backgroundImage: `url(${bkg})`,
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    // background-blend-mode: luminosity;
+    minHeight: "calc(100vh - 123px)",
+    //zIndex: "-9999"
+  },
   successText: {
     color: successColor[0]
   },

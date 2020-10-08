@@ -24,7 +24,7 @@ import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
-import Typography from "views/Typography/Typography.js";
+import Documents from "views/Documents/Documents.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
 import Calendar from "views/Calendar/Calendar.js";
 const dashboardRoutes = [
@@ -36,10 +36,10 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/typography",
+    path: "/documents",
     name: "Documents",
     icon: LibraryBooks,
-    component: Typography,
+    component: Documents,
     layout: "/admin"
   },
   {

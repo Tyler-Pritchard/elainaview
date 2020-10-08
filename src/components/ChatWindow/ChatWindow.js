@@ -30,10 +30,11 @@ class ChatWindow extends Component {
  
   render() {
     return (
+      
       <Launcher
         agentProfile={{
-          teamName: 'Elaina Chat',
-          imageUrl: 'https://a.slack-edge.com/66f9/img/avatars-teams/ava_0001-34.png'
+          teamName: 'Elaina',
+          imageUrl: './elaina_avatar2.png'
         }}
         onMessageWasSent={this._onMessageWasSent.bind(this)}
         messageList={this.state.messageList}

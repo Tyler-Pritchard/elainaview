@@ -25,10 +25,11 @@ const footerStyle = {
     padding: "15px 0",
     margin: "0",
     fontSize: "14px",
-    float: "right!important"
   },
   footer: {
     bottom: "0",
+    position: "fixed",
+    float: "right !important",
     // borderTop: "1px solid " + grayColor[11],
     padding: "15px 0",
     ...defaultFont
