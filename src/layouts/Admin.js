@@ -9,8 +9,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
-import ChatWindow from "components/ChatWindow/ChatWindow";
-
+// import ChatWindow from "components/ChatWindow/ChatWindow";
+import ChatWindow from "components/ChatWindow/ChatWindow.js";
 import '../App.css';
 import routes from "routes.js";
 
@@ -115,10 +115,10 @@ export default function Admin({ ...rest }) {
               ) : (
                 <div className={classes.map}>{switchRoutes}</div>
                 )}
-          <ChatWindow />
           </div>
         </div>
       {getRoute() ? <Footer /> : null}
+      <ChatWindow />
       </div>
     </div>
   );
