@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Launcher} from 'react-chat-window';
 
 import avatar from './elaina_avatar2.jpg';
+import '../../assets/css/chatWindowStyle.css';
  
 class ChatWindow extends Component {
  
@@ -32,7 +33,6 @@ class ChatWindow extends Component {
  
   render() {
     return (
-      
       <Launcher
         agentProfile={{
           teamName: 'Elaina',
@@ -41,6 +41,8 @@ class ChatWindow extends Component {
         onMessageWasSent={this._onMessageWasSent.bind(this)}
         messageList={this.state.messageList}
         showEmoji
+        className='chatWindow'
+        style={{zIndex: 9999999}}
       />
     )
   }

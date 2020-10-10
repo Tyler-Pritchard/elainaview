@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 
-import "../../App.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-
+import "../../assets/css/bigCalStyle.css";
 const localizer = momentLocalizer(moment);
 
 class BigCal extends Component {
