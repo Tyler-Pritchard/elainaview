@@ -23,7 +23,7 @@ const headerStyle = () => ({
     position: "absolute",
     width: "82.5%",
     paddingTop: "0px",
-    zIndex: "-20",
+    zIndex: "20",
     color: whiteColor,
     border: "0",
     borderRadius: "3px",

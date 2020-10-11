@@ -18,7 +18,7 @@ const Search = () => {
 
   useEffect(() => {
     const search = async () => {
-      const { data } = await axios.get('https://elainaportal.herokuapp.com/documents', {
+      const { data } = await axios.get('https://en.wikipedia.org/w/api.php', {
         params: {
           action: 'query',
           list: 'search',
@@ -39,7 +39,7 @@ const Search = () => {
         <div className="right floated content">
           <a
             className="ui button"
-            href={`https://elainaportal.herokuapp.com/documents`}
+            href={`https://en.wikipedia.org?curid=${result.pageid}`}
           >
             Go
           </a>

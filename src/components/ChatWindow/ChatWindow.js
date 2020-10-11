@@ -42,7 +42,6 @@ class ChatWindow extends Component {
         messageList={this.state.messageList}
         showEmoji
         className='chatWindow'
-        style={{zIndex: 9999999}}
       />
     )
   }

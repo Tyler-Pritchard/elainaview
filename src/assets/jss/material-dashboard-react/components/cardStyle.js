@@ -7,19 +7,22 @@ import {
 const cardStyle = {
   card: {
     border: "0",
-    marginBottom: "30px",
-    marginTop: "30px",
+    marginBottom: "5vh",
+    marginTop: "10vh",
     borderRadius: "6px",
     color: "rgba(" + hexToRgb(blackColor) + ", 0.87)",
     background: whiteColor,
     width: "100%",
     boxShadow: "0 1px 4px 0 rgba(" + hexToRgb(blackColor) + ", 0.14)",
     position: "relative",
+    overflow: "scroll",
     display: "flex",
     flexDirection: "column",
     minWidth: "0",
     wordWrap: "break-word",
-    fontSize: ".875rem"
+    fontSize: ".875rem",
+    zIndex: "0",
+    opacity: ".7"
   },
   cardPlain: {
     background: "transparent",

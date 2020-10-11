@@ -11,6 +11,8 @@ import GridItem from "components/Grid/GridItem.js";
 
 import styles from "assets/jss/material-dashboard-react/views/documentsStyle.js";
 
+import SearchBar from '../../components/Searchbar/Searchbar.js';
+
 const useStyles = makeStyles(styles);
 
 export default function Documents() {
@@ -22,20 +24,14 @@ export default function Documents() {
         <GridItem>
             <Card>
                 <CardHeader color="primary">
-                    <h4 className={classes.cardTitleWhite}>Material Dashboard Heading</h4>
+                    <h4 className={classes.cardTitleWhite}>Elaina Documents Repository</h4>
                     <p className={classes.cardCategoryWhite}>
-                    Created using Roboto Font Family
+                    Search for documents by case number, client name, etc.
                     </p>
                 </CardHeader>
                 <CardBody>
                     <div>
-                    <p>
-                        I will be the leader of a company that ends up being worth billions
-                        of dollars, because I got the answers. I understand culture. I am
-                        the nucleus. I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that things could
-                        be at.
-                    </p>
+                        <SearchBar />
                     </div>
                 </CardBody>
             </Card>
