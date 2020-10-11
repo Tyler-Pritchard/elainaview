@@ -8,14 +8,15 @@ const bkg = img;
 
 const documentsStyle = {
   mainBkg: {
-    border: "6px solid red",
+    backgroundPosition: "fixed",
+    overflow: "scroll",
+    marginTop: "7vh",
     backgroundImage: `url(${bkg})`,
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    // background-blend-mode: luminosity;
+    backgroundBlendMode: "luminosity",
     minHeight: "calc(100vh - 123px)",
-    //zIndex: "-9999"
   },
   content: {
     backgroundColor: '0,0,0,0,.5',
@@ -35,7 +36,7 @@ const documentsStyle = {
         fontSize: "13px",
         lineHeight: "13px",
         left: "0",
-        marginLeft: "20px",
+        marginLeft: "1vw",
         position: "absolute",
         width: "260px"
     },
