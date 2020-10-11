@@ -23,14 +23,14 @@ const headerStyle = () => ({
     position: "absolute",
     width: "82.5%",
     paddingTop: "0px",
-    zIndex: "20",
     color: whiteColor,
     border: "0",
     borderRadius: "3px",
     padding: "10px 0",
     transition: "all 150ms ease 0s",
-    minHeight: "50px",
-    display: "block"
+    height: "8vh",
+    display: "block",
+    overflow: "auto"
   },
   container: {
     paddingRight: "15px",

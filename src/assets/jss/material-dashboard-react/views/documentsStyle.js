@@ -8,7 +8,6 @@ const bkg = img;
 
 const documentsStyle = {
   mainBkg: {
-    border: "6px solid red",
     backgroundPosition: "fixed",
     overflow: "scroll",
     marginTop: "7vh",
