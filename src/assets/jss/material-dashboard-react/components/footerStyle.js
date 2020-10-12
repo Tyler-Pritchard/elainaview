@@ -1,3 +1,4 @@
+import { grayColor } from "assets/jss/material-dashboard-react";
 import {
   defaultFont,
   container,
@@ -27,10 +28,13 @@ const footerStyle = {
     fontSize: "14px",
   },
   footer: {
+    border: "3px solid red",
+    width: "82.5%",
     bottom: "0",
-    position: "fixed",
+    position: "absolute",
     float: "right !important",
     // borderTop: "1px solid " + grayColor[11],
+    backgroundColor: grayColor,
     padding: "15px 0",
     ...defaultFont
   },
