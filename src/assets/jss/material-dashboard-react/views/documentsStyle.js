@@ -8,15 +8,13 @@ const bkg = img;
 
 const documentsStyle = {
   mainBkg: {
-    backgroundPosition: "fixed",
     overflow: "scroll",
-    marginTop: "7vh",
     backgroundImage: `url(${bkg})`,
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundBlendMode: "luminosity",
-    minHeight: "calc(100vh - 123px)",
+    minHeight: "calc(100vh - 123px)"
   },
   content: {
     backgroundColor: '0,0,0,0,.5',

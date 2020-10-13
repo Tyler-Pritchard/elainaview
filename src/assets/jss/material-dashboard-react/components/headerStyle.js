@@ -21,7 +21,7 @@ const headerStyle = () => ({
     borderBottom: "0",
     marginBottom: "0",
     position: "absolute",
-    width: "82.5%",
+    width: "fill-available",
     paddingTop: "0px",
     color: whiteColor,
     border: "0",
@@ -29,8 +29,7 @@ const headerStyle = () => ({
     padding: "10px 0",
     transition: "all 150ms ease 0s",
     height: "8vh",
-    display: "block",
-    overflow: "auto"
+    display: "block"
   },
   container: {
     paddingRight: "15px",
