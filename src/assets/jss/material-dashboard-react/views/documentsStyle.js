@@ -8,9 +8,7 @@ const bkg = img;
 
 const documentsStyle = {
   mainBkg: {
-    backgroundPosition: "fixed",
     overflow: "scroll",
-    marginTop: "7vh",
     backgroundImage: `url(${bkg})`,
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",

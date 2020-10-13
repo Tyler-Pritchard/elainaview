@@ -7,7 +7,7 @@ import {
 const cardStyle = {
   card: {
     marginBottom: "5vh",
-    marginTop: "1vh",
+    marginTop: "9vh",
     paddingTop: "1vh",
     borderRadius: "6px",
     background: whiteColor,
