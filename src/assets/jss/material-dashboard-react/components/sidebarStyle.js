@@ -18,6 +18,7 @@ const sidebarStyle = theme => ({
   drawerPaper: {
     border: "none",
     position: "fixed",
+    paddingTop: "2vh",
     top: "0",
     bottom: "0",
     left: "0",
