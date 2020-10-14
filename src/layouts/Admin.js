@@ -1,19 +1,21 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
+import { AdminRoutes } from "routes.js";
+
 // creates a beautiful scrollbar
 import PerfectScrollbar from "perfect-scrollbar";
 import "perfect-scrollbar/css/perfect-scrollbar.css";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+
 // core components
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
-// import ChatWindow from "components/ChatWindow/ChatWindow";
 import ChatWindow from "components/ChatWindow/ChatWindow.js";
-import '../App.css';
-import routes from "routes.js";
 
+
+// @material-ui/core components
+import { makeStyles } from "@material-ui/core/styles";
+import '../App.css';
 import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
 
 import bgImage from "assets/img/sidebar2.png";
@@ -22,7 +24,7 @@ let ps;
 
 const switchRoutes = (
   <Switch>
-    {routes.map((prop, key) => {
+    {AdminRoutes.map((prop, key) => {
       if (prop.layout === "/admin") {
         return (
           <Route
@@ -94,7 +96,7 @@ export default function Admin({ ...rest }) {
   return (
     <div className={classes.wrapper}>
     <Sidebar
-        routes={routes}
+        routes={AdminRoutes}
         //logoText={"Law Office Name"}
         logo={logo}
         image={bgImage}
@@ -103,23 +105,33 @@ export default function Admin({ ...rest }) {
         color={color}
         {...rest}
       />
+          <div className={classes.mainPanel} ref={mainPanel}>
         <Navbar
-          routes={routes}
+          routes={AdminRoutes}
           handleDrawerToggle={handleDrawerToggle}
           {...rest}
+          adminActive
         />
-      <div className={classes.mainPanel} ref={mainPanel}>
         <div className="mainBkg">
           <div className={classes.container}>
-       
             {getRoute() ? (
+       
               <div>{switchRoutes}</div>
               ) : (
                 <div className={classes.map}>{switchRoutes}</div>
                 )}
           </div>
+          {getRoute() ? <Footer /> : null}
         </div>
-      {getRoute() ? <Footer /> : null}
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <ChatWindow />
       </div>
     </div>

@@ -1,28 +1,31 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
+import {CustomerRoutes} from "routes.js";
+
 // creates a beautiful scrollbar
 import PerfectScrollbar from "perfect-scrollbar";
 import "perfect-scrollbar/css/perfect-scrollbar.css";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
 // core components
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
+import ChatWindow from "components/ChatWindow/ChatWindow.js";
 
-import routes from "routes.js";
-
+// @material-ui/core components
+import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-dashboard-react/layouts/customerStyle.js";
+import '../App.css';
+
 
 import bgImage from "assets/img/sidebar-2.jpg";
-import logo from "assets/img/reactlogo.png";
+import logo from "assets/img/law-firm-logo-trans_1732x1732.png";
 
 let ps;
 
 const switchRoutes = (
   <Switch>
-    {routes.map((prop, key) => {
+    {CustomerRoutes.map((prop, key) => {
       if (prop.layout === "/customer") {
         return (
           <Route
@@ -34,20 +37,20 @@ const switchRoutes = (
       }
       return null;
     })}
-    <Redirect from="/customer" to="/customer/customer-page" />
+    <Redirect from="/customer" to="/customer/dashboard" />
   </Switch>
 );
 
 const useStyles = makeStyles(styles);
 
-export default function CUSTOMER({ ...rest }) {
+export default function Customer({ ...rest }) {
   // styles
   const classes = useStyles();
   // ref to help us initialize PerfectScrollbar on windows devices
   const mainPanel = React.createRef();
   // states and functions
   const [image, setImage] = React.useState(bgImage);
-  const [color, setColor] = React.useState("blue");
+  const [color] = React.useState("blue");
   const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleImageClick = image => {
@@ -66,9 +69,7 @@ export default function CUSTOMER({ ...rest }) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const getRoute = () => {
-    return window.location.pathname !== "/admin/maps";
-  };
+
   const resizeFunction = () => {
     if (window.innerWidth >= 960) {
       setMobileOpen(false);
@@ -95,10 +96,9 @@ export default function CUSTOMER({ ...rest }) {
   return (
     <div className={classes.wrapper}>
       <Sidebar
-        routes={routes}
-        logoText={"الإبداعية تيم"}
+        routes={CustomerRoutes}
         logo={logo}
-        image={image}
+        image={bgImage}
         handleDrawerToggle={handleDrawerToggle}
         open={mobileOpen}
         color={color}
@@ -107,20 +107,22 @@ export default function CUSTOMER({ ...rest }) {
       />
       <div className={classes.mainPanel} ref={mainPanel}>
         <Navbar
-          routes={routes}
+          routes={CustomerRoutes}
           handleDrawerToggle={handleDrawerToggle}
           customerActive
           {...rest}
         />
-        {/* On the /maps route we want the map to be on full screen - this is not possible if the content and conatiner classes are present because they have some paddings which would make the map smaller */}
-        {getRoute() ? (
-          <div className={classes.content}>
-            <div className={classes.container}>{switchRoutes}</div>
+        <div className="mainBkg">
+          {getRoute() ? (
+            <div className={classes.content}>
+              <div className={classes.container}>{switchRoutes}</div>
+            </div>
+          ) : (
+            <div className={classes.map}>{switchRoutes}</div>
+          )}
           </div>
-        ) : (
-          <div className={classes.map}>{switchRoutes}</div>
-        )}
-        {getRoute() ? <Footer /> : null}
+          {getRoute() ? <Footer /> : null}
+        </div>
         <FixedPlugin
           handleImageClick={handleImageClick}
           handleColorClick={handleColorClick}
@@ -130,6 +132,7 @@ export default function CUSTOMER({ ...rest }) {
           fixedClasses={fixedClasses}
           customerActive
         />
+        <ChatWindow />
       </div>
     </div>
   );
