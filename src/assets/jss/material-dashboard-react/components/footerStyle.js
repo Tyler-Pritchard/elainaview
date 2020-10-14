@@ -33,6 +33,7 @@ const footerStyle = {
     position: "sticky",
     backgroundColor: "whitesmoke",
     width: "fill-available",
+    height: "fill-available",
     ...defaultFont
   },
   container,

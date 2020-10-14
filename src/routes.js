@@ -25,7 +25,6 @@ import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import Documents from "views/Documents/Documents.js";
-import NotificationsPage from "views/Notifications/Notifications.js";
 import Calendar from "views/Calendar/Calendar.js";
 const dashboardRoutes = [
   {
