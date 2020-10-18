@@ -1,21 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Route } from 'react-router-dom';
+import Landing from './layouts/Landing';
 import Admin from './layouts/Admin';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { ConfigureStore } from './redux/configureStore';
+import Customer from './layouts/Customer';
 
-const store = ConfigureStore();
-
-class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-         <BrowserRouter> 
-            <Admin />
-         </BrowserRouter>
-      </Provider>
-    );
-  }
-}
-
-export default App;
+export default () => {
+  return (
+    <div>
+      <Route path="/" exact component={Landing} />
+      <Route path="/admin" component={Admin} />
+      <Route path ="/customer" component={Customer} />
+    </div>
+  );
+};

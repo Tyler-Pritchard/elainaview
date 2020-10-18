@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
-
+import { BrowserRouter, Route } from 'react-router-dom';
+import Root from './Root';
 import App from './App';
 import './index.css';
 
+import * as serviceWorker from './serviceWorker';
+
 ReactDOM.render(
-            <App />,
-    document.getElementById('root')
+    <Root>
+        <BrowserRouter>
+            <Route path="/" component={App} />
+        </BrowserRouter>
+    </Root>,
+    document.querySelector('#root')
 );
 
 
