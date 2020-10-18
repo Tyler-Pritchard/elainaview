@@ -1,26 +1,25 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import {CustomerRoutes} from "routes.js";
+import { CustomerRoutes } from "routes.js";
 
 // creates a beautiful scrollbar
 import PerfectScrollbar from "perfect-scrollbar";
 import "perfect-scrollbar/css/perfect-scrollbar.css";
+
 // core components
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
-import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 import ChatWindow from "components/ChatWindow/ChatWindow.js";
+
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-dashboard-react/layouts/customerStyle.js";
 import '../App.css';
+import styles from "assets/jss/material-dashboard-react/layouts/customerStyle.js";
 
-
-import bgImage from "assets/img/sidebar-2.jpg";
+import bgImage from "assets/img/sidebar2.png";
 import logo from "assets/img/law-firm-logo-trans_1732x1732.png";
-
 let ps;
 
 const switchRoutes = (
@@ -49,15 +48,14 @@ export default function Customer({ ...rest }) {
   // ref to help us initialize PerfectScrollbar on windows devices
   const mainPanel = React.createRef();
   // states and functions
-  const [image, setImage] = React.useState(bgImage);
+  //const [image, setImage] = React.useState(bgImage);
   const [color] = React.useState("blue");
-  const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
+  // const [color, setColor] = React.useState("blue");
+
+  // const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
   const [mobileOpen, setMobileOpen] = React.useState(false);
   // const handleImageClick = image => {
   //   setImage(image);
-  // };
-  // const handleColorClick = color => {
-  //   setColor(color);
   // };
   // const handleFixedClick = () => {
   //   if (fixedClasses === "dropdown") {
@@ -69,11 +67,9 @@ export default function Customer({ ...rest }) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
   const getRoute = () => {
-    return window.location.pathname !== "/admin/";
+    return window.location.pathname !== "/customer/";
   };
-
   const resizeFunction = () => {
     if (window.innerWidth >= 960) {
       setMobileOpen(false);
@@ -99,22 +95,22 @@ export default function Customer({ ...rest }) {
   }, [mainPanel]);
   return (
     <div className={classes.wrapper}>
-      <Sidebar
+    <Sidebar
         routes={CustomerRoutes}
+        //logoText={"Law Office Name"}
         logo={logo}
         image={bgImage}
         handleDrawerToggle={handleDrawerToggle}
         open={mobileOpen}
         color={color}
-        customerActive
         {...rest}
       />
-      <div className={classes.mainPanel} ref={mainPanel}>
+          <div className={classes.mainPanel} ref={mainPanel}>
         <Navbar
           routes={CustomerRoutes}
           handleDrawerToggle={handleDrawerToggle}
-          customerActive
           {...rest}
+          customerActive
         />
         <div className="mainBkg">
           <div className={classes.container}>
