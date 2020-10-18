@@ -124,14 +124,6 @@ export default function Admin({ ...rest }) {
           {getRoute() ? <Footer /> : null}
         </div>
       
-      
-      
-      
-      
-      
-      
-      
-      
       <ChatWindow />
       </div>
     </div>

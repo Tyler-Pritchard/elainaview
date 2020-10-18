@@ -53,21 +53,25 @@ export default function Customer({ ...rest }) {
   const [color] = React.useState("blue");
   const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const handleImageClick = image => {
-    setImage(image);
-  };
-  const handleColorClick = color => {
-    setColor(color);
-  };
-  const handleFixedClick = () => {
-    if (fixedClasses === "dropdown") {
-      setFixedClasses("dropdown show");
-    } else {
-      setFixedClasses("dropdown");
-    }
-  };
+  // const handleImageClick = image => {
+  //   setImage(image);
+  // };
+  // const handleColorClick = color => {
+  //   setColor(color);
+  // };
+  // const handleFixedClick = () => {
+  //   if (fixedClasses === "dropdown") {
+  //     setFixedClasses("dropdown show");
+  //   } else {
+  //     setFixedClasses("dropdown");
+  //   }
+  // };
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const getRoute = () => {
+    return window.location.pathname !== "/admin/";
   };
 
   const resizeFunction = () => {
@@ -113,26 +117,18 @@ export default function Customer({ ...rest }) {
           {...rest}
         />
         <div className="mainBkg">
-          {getRoute() ? (
-            <div className={classes.content}>
-              <div className={classes.container}>{switchRoutes}</div>
-            </div>
-          ) : (
-            <div className={classes.map}>{switchRoutes}</div>
-          )}
+          <div className={classes.container}>
+            {getRoute() ? (
+       
+              <div>{switchRoutes}</div>
+              ) : (
+                <div className={classes.map}>{switchRoutes}</div>
+                )}
           </div>
           {getRoute() ? <Footer /> : null}
         </div>
-        <FixedPlugin
-          handleImageClick={handleImageClick}
-          handleColorClick={handleColorClick}
-          bgColor={color}
-          bgImage={image}
-          handleFixedClick={handleFixedClick}
-          fixedClasses={fixedClasses}
-          customerActive
-        />
-        <ChatWindow />
+      
+      <ChatWindow />
       </div>
     </div>
   );
