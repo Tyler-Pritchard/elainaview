@@ -10,10 +10,8 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-         <BrowserRouter>
-          <div>
+         <BrowserRouter> 
             <Admin />
-          </div>
          </BrowserRouter>
       </Provider>
     );

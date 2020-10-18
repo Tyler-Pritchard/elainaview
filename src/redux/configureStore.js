@@ -1,15 +1,15 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import reduxThunk from 'redux-thunk';
 import logger from 'redux-logger';
-// import {chats, user} from 'redux/reducers/index';
+import {reducers} from 'redux/reducers/index';
 
 export const ConfigureStore = () => {
     const store = createStore(
         combineReducers({
-            // user: user,
-            // chats: chats,
-        }),
-        applyMiddleware(thunk, logger)
+            user: reducers.user,
+            chats: reducers.chats,
+        }), {},
+        applyMiddleware(reduxThunk, logger)
     );
 
     return store;
