@@ -12,17 +12,17 @@ import Poppers from "@material-ui/core/Popper";
 // @material-ui/icons
 import Person from "@material-ui/icons/Person";
 import Notifications from "@material-ui/icons/Notifications";
-import ChatIcon from "@material-ui/icons/Chat";
+import Dashboard from "@material-ui/icons/Dashboard";
 import Search from "@material-ui/icons/Search";
 // core components
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 
-import styles from "assets/jss/material-dashboard-react/components/rtlHeaderLinksStyle.js";
+import styles from "assets/jss/material-dashboard-react/components/customerHeaderLinksStyle.js";
 
 const useStyles = makeStyles(styles);
 
-export default function RTLNavbarLinks() {
+export default function CUSTOMERNavbarLinks() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(null);
   const handleToggle = event => {
@@ -59,10 +59,10 @@ export default function RTLNavbarLinks() {
         color={window.innerWidth > 959 ? "transparent" : "white"}
         justIcon={window.innerWidth > 959}
         simple={!(window.innerWidth > 959)}
-        aria-label="ChatIcon"
+        aria-label="Dashboard"
         className={classes.buttonLink}
       >
-        <ChatIcon className={classes.icons} />
+        <Dashboard className={classes.icons} />
         <Hidden mdUp implementation="css">
           <p className={classes.linkText}>آمارها</p>
         </Hidden>

@@ -18,6 +18,7 @@ const sidebarStyle = theme => ({
   drawerPaper: {
     border: "none",
     position: "fixed",
+    paddingTop: "2vh",
     top: "0",
     bottom: "0",
     left: "0",
@@ -50,7 +51,16 @@ const sidebarStyle = theme => ({
       ...transition
     }
   },
-
+  drawerPaperCustomer: {
+    [theme.breakpoints.up("md")]: {
+      left: "auto !important",
+      right: "0 !important"
+    },
+    [theme.breakpoints.down("sm")]: {
+      left: "0  !important",
+      right: "auto !important"
+    }
+  },
   // logo: {
   //   height: "18vh",
   //   position: "relative",
@@ -158,12 +168,20 @@ const sidebarStyle = theme => ({
     verticalAlign: "middle",
     color: "rgba(" + hexToRgb(whiteColor) + ", 0.8)"
   },
+  itemIconCustomer: {
+    marginRight: "3px",
+    marginLeft: "15px",
+    float: "right"
+  },
   itemText: {
     ...defaultFont,
     margin: "0",
     lineHeight: "30px",
     fontSize: "26px",
     color: whiteColor
+  },
+  itemTextCustomer: {
+    textAlign: "right"
   },
   whiteFont: {
     color: whiteColor

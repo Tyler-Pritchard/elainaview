@@ -4,7 +4,7 @@ import { Chats } from './chats';
 import { User } from './user';
 
 
-export default combineReducers({
+export const reducers = combineReducers({
     auth: Auth,
     chats: Chats,
     user: User

@@ -19,15 +19,16 @@
 import Dashboard from "@material-ui/icons/Dashboard";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
-// import Notifications from "@material-ui/icons/Notifications";
-// import Unarchive from "@material-ui/icons/Unarchive";
 
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import Documents from "views/Documents/Documents.js";
-import NotificationsPage from "views/Notifications/Notifications.js";
 import Calendar from "views/Calendar/Calendar.js";
-const dashboardRoutes = [
+import Login from "views/Login/Login.js";
+import Signup from "views/Signup/Signup";
+import Signout from "views/Signout/Signout.js";
+
+const AdminRoutes = [
   {
     path: "/dashboard",
     name: "Dashboard",
@@ -49,23 +50,57 @@ const dashboardRoutes = [
     component: Calendar,
     layout: "/admin"
   }
-  // {
-  //   path: "/signout",
-  //   name: "Signout",
-  //   icon: CalendarTodayIcon,
-  //   component: SignoutPage,
-  //   layout: "/signout"
-  // }
+];
+const CustomerRoutes = [
+  {
+    path: "/dashboard",
+    name: "Dashboard",
+    icon: Dashboard,
+    component: DashboardPage,
+    layout: "/customer"
+  },
+  {
+    path: "/documents",
+    name: "Documents",
+    icon: LibraryBooks,
+    component: Documents,
+    layout: "/customer"
+  },
+  {
+    path: "/calendar",
+    name: "Calendar",
+    icon: CalendarTodayIcon,
+    component: Calendar,
+    layout: "/customer"
+  }
 ];
 
-// const AuthRoutes = [
-//   {
-//     path: "/login",
-//     name: "Login",
-//     icon: CalendarTodayIcon,
-//     component: LoginPage,
-//     layout: "/login"
-//   }
-// ];
+const AuthRoutes = [
+  {
+    path: "/login",
+    name: "Login",
+    icon: CalendarTodayIcon,
+    component: Login,
+    layout: "/login"
+  },
+  {
+    path: "/signup",
+    name: "Signup",
+    icon: CalendarTodayIcon,
+    component: Signup,
+    layout: "/signup"
+  },
+  {
+    path: "/signout",
+    name: "Signout",
+    icon: CalendarTodayIcon,
+    component: Signout,
+    layout: "/signout"
+  }
+];
 
-export default dashboardRoutes;
+export {
+  AuthRoutes,
+  AdminRoutes,
+  CustomerRoutes
+};

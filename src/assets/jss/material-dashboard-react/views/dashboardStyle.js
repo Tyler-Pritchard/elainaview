@@ -14,9 +14,8 @@ const dashboardStyle = {
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    // background-blend-mode: luminosity;
-    minHeight: "calc(100vh - 123px)",
-    //zIndex: "-9999"
+    blendMode: "luminosity",
+    minHeight: "calc(100vh - 123px)"
   },
   successText: {
     color: successColor[0]

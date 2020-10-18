@@ -1,27 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware} from 'redux';
-import reduxThunk from 'redux-thunk';
-
 import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'typeface-lobster';
-import 'typeface-open-sans';
-import 'font-awesome/css/font-awesome.css';
-import 'bootstrap-social/bootstrap-social.css';
-import 'fontsource-roboto';
 
 import App from './App';
-import reducers from './redux/reducers';
-
-const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+import './index.css';
 
 ReactDOM.render(
-        <Provider store={store}>
-            <App />
-        </Provider>,
+            <App />,
     document.getElementById('root')
 );
 
