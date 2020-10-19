@@ -89,13 +89,6 @@ const AuthRoutes = [
     icon: CalendarTodayIcon,
     component: Signup,
     layout: "/signup"
-  },
-  {
-    path: "/signout",
-    name: "Signout",
-    icon: CalendarTodayIcon,
-    component: Signout,
-    layout: "/signout"
   }
 ];
 
