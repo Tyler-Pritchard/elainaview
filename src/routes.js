@@ -38,7 +38,7 @@ const AdminRoutes = [
   },
   {
     path: "/documents",
-    name: "Documents",
+    name: "Clients",
     icon: LibraryBooks,
     component: Documents,
     layout: "/admin"
