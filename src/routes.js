@@ -26,7 +26,6 @@ import Documents from "views/Documents/Documents.js";
 import Calendar from "views/Calendar/Calendar.js";
 import Login from "views/Login/Login.js";
 import Signup from "views/Signup/Signup";
-import Signout from "views/Signout/Signout.js";
 
 const AdminRoutes = [
   {
