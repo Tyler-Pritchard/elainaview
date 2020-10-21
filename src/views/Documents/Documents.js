@@ -40,18 +40,3 @@ export default function Documents() {
     </div>
   );
 }
-
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     height: '100vh',
-//   },
-//   image: {
-//     height: '90vh',
-//     backgroundImage: 'url(/Users/tylerpritchard/Desktop/elainaview/src/assets/img/law-firm-logo-trans.png)',
-//     backgroundRepeat: 'no-repeat',
-//     backgroundColor:
-//       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-//     backgroundSize: 'cover',
-//     backgroundPosition: 'center',
-//   }
-// }));
