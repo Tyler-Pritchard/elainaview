@@ -12,7 +12,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import image from '/Users/tylerpritchard/Desktop/TDT/elainaview/src/assets/img/columns2.png';
+import image from './columns2.png';
 
 function Copyright() {
   return (
