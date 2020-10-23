@@ -24,7 +24,7 @@ export default function Documents() {
         <GridItem>
             <Card>
                 <CardHeader color="primary">
-                    <h4 className={classes.cardTitleWhite}>Elaina Documents Repository</h4>
+                    <h4 className={classes.cardTitleWhite}>Client Repository</h4>
                     <p className={classes.cardCategoryWhite}>
                     Search for documents by case number, client name, etc.
                     </p>

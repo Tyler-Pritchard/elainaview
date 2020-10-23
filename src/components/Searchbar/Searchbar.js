@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import { Switch, Route, Redirect } from "react-router-dom";
+
+import { AdminRoutes }  from 'routes.js';
 import GridContainer from 'components/Grid/GridContainer';
 import GridItem from 'components/Grid/GridItem';
 
@@ -11,10 +14,15 @@ import CardHeader from '../Card/CardHeader.js';
 import CustomInput from '../CustomInput/CustomInput.js';
 import Button from 'components/CustomButtons/Button.js';
 
+import UserDocs from 'views/UserProfile/UserDocs.js';
+
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-dashboard-react/components/searchbarStyle.js";
 
 import marc from './marc.jpg';
+
+const useStyles = makeStyles(styles);
+
 
 const Search = () => {
   const [term, setTerm] = useState('lorem ipsum');
@@ -51,26 +59,32 @@ const Search = () => {
   const renderedResults = results.map((result) => {
     return (
       <GridItem>
-        <Card style={{width: "20vw", display: "flex", alignItems: "center", textAlign: "center"}}>
+        <Card style={{width: "23vw", display: "flex", alignItems: "center", textAlign: "center"}}>
           {/* <CardAvatar> */}
             <img src={marc} 
             alt="user_avatar_url"
-            style={{width: "25%"}}
+            style={{width: "40%"}}
           />
           {/* </CardAvatar> */}
           <div key={result.pageid} className="item">
             <div className="right floated content">
               <Button
+                link={true}
+                children={UserDocs}
+              >
+                Client Docs
+              </Button>
+              {/* <Button
                 color="info"
                 href={`https://en.wikipedia.org?curid=${result.pageid}`}
                 target="_blank"
               >
                 Open Document
-              </Button>
+              </Button> */}
             </div>
             <div className="content">
               <CardHeader>{result.title}</CardHeader>
-              <CardBody dangerouslySetInnerHTML={{ __html: result.snippet }}></CardBody>
+              {/* <CardBody dangerouslySetInnerHTML={{ __html: result.snippet }}></CardBody> */}
             </div>
           </div>
         </Card>
@@ -82,7 +96,7 @@ const Search = () => {
     <div>
       <div className="ui form">
         <div className="field">
-          <label>Enter Client Name: </label>
+          <label>Client Name: </label>
           <input
             value={term}
             onChange={(e) => setTerm(e.target.value)}
