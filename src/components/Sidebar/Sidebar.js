@@ -16,6 +16,7 @@ import AdminNavbarLinks from "components/Navbars/AdminNavbarLinks.js";
 import CustomerNavbarLinks from "components/Navbars/CustomerNavbarLinks.js";
 
 import styles from "assets/jss/material-dashboard-react/components/sidebarStyle.js";
+import { transparent } from "material-ui/styles/colors";
 
 const useStyles = makeStyles(styles);
 
@@ -26,6 +27,7 @@ export default function Sidebar(props) {
     return window.location.href.indexOf(routeName) > -1 ? true : false;
   }
   const { color, image, routes } = props;
+
   var links = (
     <List className={classes.list}>
       {routes.map((prop, key) => {
@@ -41,9 +43,11 @@ export default function Sidebar(props) {
             [" " + classes[color]]: activeRoute(prop.layout + prop.path)
           });
         }
+        
         const whiteFontClasses = classNames({
           [" " + classes.whiteFont]: activeRoute(prop.layout + prop.path)
         });
+        console.log("THIS IS PROPS: ", props);
         return (
           <NavLink
             to={prop.layout + prop.path}
@@ -52,6 +56,7 @@ export default function Sidebar(props) {
             key={key}
           >
             <ListItem button className={classes.itemLink + listItemClasses}>
+
               {typeof prop.icon === "string" ? (
                 <Icon
                   className={classNames(classes.itemIcon, whiteFontClasses, {
@@ -77,9 +82,13 @@ export default function Sidebar(props) {
             </ListItem>
           </NavLink>
         );
-      })}
+      },
+
+      )}
     </List>
   );
+  
+ 
   var brand = (
     <div className={classes.logo}>
       {/* <a
@@ -96,6 +105,8 @@ export default function Sidebar(props) {
       </a> */}
     </div>
   );
+
+  
   return (
     <div>
       <Hidden mdUp implementation="css">

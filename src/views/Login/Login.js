@@ -12,6 +12,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import image from '/Users/tylerpritchard/Desktop/TDT/elainaview/src/assets/img/columns2.png';
 
 function Copyright() {
   return (
@@ -39,6 +40,11 @@ const SignInSide = () => {
           <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
           </Avatar>
+          <li>
+              <a href="/auth/google">
+                  Login With Google
+              </a>
+          </li>
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
@@ -105,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
       height: '100vh',
     },
     image: {
-      backgroundImage: 'url(https://source.unsplash.com/random)',
+      backgroundImage: `url(${image})`,
       backgroundRepeat: 'no-repeat',
       backgroundColor:
         theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],

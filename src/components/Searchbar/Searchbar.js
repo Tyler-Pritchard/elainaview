@@ -1,8 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import { Switch, Route, Redirect } from "react-router-dom";
+
+import { AdminRoutes }  from 'routes.js';
+import GridContainer from 'components/Grid/GridContainer';
+import GridItem from 'components/Grid/GridItem';
+
+import Card from '../Card/Card.js';
+import CardAvatar from '../Card/CardAvatar';
+import CardBody from '../Card/CardBody.js';
+import CardHeader from '../Card/CardHeader.js';
+import CustomInput from '../CustomInput/CustomInput.js';
+import Button from 'components/CustomButtons/Button.js';
+
+import UserDocs from 'views/UserProfile/UserDocs.js';
+
+import { makeStyles } from "@material-ui/core/styles";
+import styles from "assets/jss/material-dashboard-react/components/searchbarStyle.js";
+
+import marc from './marc.jpg';
+
+const useStyles = makeStyles(styles);
+
+
 const Search = () => {
-  const [term, setTerm] = useState('programming');
+  const [term, setTerm] = useState('lorem ipsum');
   const [debouncedTerm, setDebouncedTerm] = useState(term);
   const [results, setResults] = useState([]);
 
@@ -35,20 +58,37 @@ const Search = () => {
 
   const renderedResults = results.map((result) => {
     return (
-      <div key={result.pageid} className="item">
-        <div className="right floated content">
-          <a
-            className="ui button"
-            href={`https://en.wikipedia.org?curid=${result.pageid}`}
-          >
-            Open Document
-          </a>
-        </div>
-        <div className="content">
-          <div className="header">{result.title}</div>
-          <span dangerouslySetInnerHTML={{ __html: result.snippet }}></span>
-        </div>
-      </div>
+      <GridItem>
+        <Card style={{width: "23vw", display: "flex", alignItems: "center", textAlign: "center"}}>
+          {/* <CardAvatar> */}
+            <img src={marc} 
+            alt="user_avatar_url"
+            style={{width: "40%"}}
+          />
+          {/* </CardAvatar> */}
+          <div key={result.pageid} className="item">
+            <div className="right floated content">
+              <Button
+                link={true}
+                children={UserDocs}
+              >
+                Client Docs
+              </Button>
+              {/* <Button
+                color="info"
+                href={`https://en.wikipedia.org?curid=${result.pageid}`}
+                target="_blank"
+              >
+                Open Document
+              </Button> */}
+            </div>
+            <div className="content">
+              <CardHeader>{result.title}</CardHeader>
+              {/* <CardBody dangerouslySetInnerHTML={{ __html: result.snippet }}></CardBody> */}
+            </div>
+          </div>
+        </Card>
+      </GridItem>
     );
   });
 
@@ -56,7 +96,7 @@ const Search = () => {
     <div>
       <div className="ui form">
         <div className="field">
-          <label>Enter Search Term: </label>
+          <label>Client Name: </label>
           <input
             value={term}
             onChange={(e) => setTerm(e.target.value)}
@@ -64,7 +104,9 @@ const Search = () => {
           />
         </div>
       </div>
-      <div className="ui celled list">{renderedResults}</div>
+      <GridContainer>
+        {renderedResults}
+      </GridContainer>
     </div>
   );
 };

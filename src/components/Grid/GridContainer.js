@@ -8,8 +8,9 @@ import Grid from "@material-ui/core/Grid";
 const styles = {
   grid: {
     margin: "0 -15px !important",
-    width: "unset"
-  }
+    width: "unset",
+    opacity: ".92"
+  },
 };
 
 const useStyles = makeStyles(styles);

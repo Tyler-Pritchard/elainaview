@@ -21,7 +21,6 @@ const cardStyle = {
     wordWrap: "break-word",
     fontSize: ".875rem",
     zIndex: "0",
-    opacity: ".5"
   },
   cardPlain: {
     background: "transparent",
