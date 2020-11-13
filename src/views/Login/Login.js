@@ -42,9 +42,9 @@ const SignInSide = () => {
             <LockOutlinedIcon />
           </Avatar>
           <li>
-              <a href={`${baseUrl}auth/google`}>
+              <Link href="auth/google">
                   Login With Google
-              </a>
+              </Link>
           </li>
           <Typography component="h1" variant="h5">
             Sign in
