@@ -1,19 +1,33 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
+import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Auth } from 'redux/reducers/auth';
+import { connect } from 'react-redux';
+// import * as actions from '../src/redux/actions';
+
 import Login from './views/Login/Login';
 import Signup from './views/Signup/Signup';
 import Admin from './layouts/Admin';
 import Customer from './layouts/Customer';
-import { Auth } from 'redux/reducers/auth';
 
-export default () => {
-  return (
-    <div>
-      <Route path="/" exact component={Login} />
-      <Route path="/signup" component={Signup} />
-      <Route path="/auth/google" component={Auth} />
-      <Route path="/admin" component={Admin} />
-      <Route path ="/customer" component={Customer} />
-    </div>
-  );
+class App extends Component {
+  componentDidMount() {
+    // this.props.fetchUser();
+  }
+  render() {
+    return (
+      <div className="container">
+        <BrowserRouter>
+          <div>
+            <Route exact path="/" component={Login} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/auth/google" component={Auth} />
+            <Route path="/admin" component={Admin} />
+            <Route path ="/customer" component={Customer} />
+          </div>
+        </BrowserRouter>
+      </div>
+    );
+  }
 };
+
+export default connect(null, null)(App);

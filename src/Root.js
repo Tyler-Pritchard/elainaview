@@ -5,6 +5,9 @@ import async from 'middlewares/async';
 import stateValidator from 'middlewares/stateValidator';
 import reducers from './redux/reducers';
 
+import axios from 'axios';
+window.axios = axios;
+
 export default ({ children, initialState = {} }) => {
     const store = createStore(
         reducers,

@@ -13,7 +13,6 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import image from './columns2.png';
-import baseUrl from '../../baseUrl';
 
 function Copyright() {
   return (
@@ -42,7 +41,7 @@ const SignInSide = () => {
             <LockOutlinedIcon />
           </Avatar>
           <li>
-              <Link href="auth/google">
+              <Link color="inherit" href="auth/google">
                   Login With Google
               </Link>
           </li>

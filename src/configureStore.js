@@ -1,27 +1,17 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-// import {chats, user} from 'redux/reducers/index';
+import * as reducers from 'redux/reducers/index';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export const ConfigureStore = () => {
     const store = createStore(
         combineReducers({
-            // user: user,
-            // chats: chats,
+            reducers: reducers,
         }),
-        applyMiddleware(thunk, logger)
+        composeEnhancers(applyMiddleware(thunk, logger))
     );
 
     return store;
 }; 
-
-
-// import configureStore from './configureStore';
-
-// import { Provider } from 'react-redux';
-// import { createStore, applyMiddleware} from 'redux';
-// import reduxThunk from 'redux-thunk';
-
-// import reducers from './redux/reducers';
-
-// const store = createStore(reducers, {}, applyMiddleware(reduxThunk));

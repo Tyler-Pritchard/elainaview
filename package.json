@@ -47,6 +47,7 @@
     "react-swipeable-views": "0.13.9",
     "reactstrap": "^8.5.1",
     "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "serve": "^11.3.2",
@@ -84,7 +85,7 @@
   "bugs": {
     "url": "https://github.com/deeplawtechnology/issues"
   },
-  "homepage": "https://elainaview.herokuapp.com/",
+  "homepage": "https://elaina-view.herokuapp.com/",
   "optionalDependencies": {
     "@types/googlemaps": "3.39.6",
     "@types/markerclustererplus": "2.1.33",

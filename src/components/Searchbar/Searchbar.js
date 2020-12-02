@@ -41,7 +41,7 @@ const Search = () => {
 
   useEffect(() => {
     const search = async () => {
-      const { data } = await axios.get('https://en.wikipedia.org/w/api.php', {
+      const { data } = await axios.get('api/documents', {
         params: {
           action: 'query',
           list: 'search',
@@ -74,13 +74,13 @@ const Search = () => {
               >
                 Client Docs
               </Button>
-              {/* <Button
+              <Button
                 color="info"
-                href={`https://en.wikipedia.org?curid=${result.pageid}`}
+                href={`https://en.wikipedia.org?curid=${result.debouncedTerm}`}
                 target="_blank"
               >
                 Open Document
-              </Button> */}
+              </Button>
             </div>
             <div className="content">
               <CardHeader>{result.title}</CardHeader>
