@@ -11,7 +11,7 @@ import Customer from './layouts/Customer';
 
 class App extends Component {
   componentDidMount() {
-    // this.props.fetchUser();
+    this.props.fetchUser();
   }
   render() {
     return (
