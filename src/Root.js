@@ -14,5 +14,5 @@ export default ({ children, initialState = {} }) => {
         initialState,
         applyMiddleware(async, stateValidator)
     );
-    return <Provider store={store}>{children}</Provider>;
+    return (<Provider store={store}>{children}</Provider>);
 };
