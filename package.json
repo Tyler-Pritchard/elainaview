@@ -27,6 +27,7 @@
     "jquery": "^3.5.1",
     "material-dashboard-react": "^1.9.0",
     "material-ui": "^0.20.2",
+    "materialize-css": "^1.0.0",
     "moment": "2.24.0",
     "perfect-scrollbar": "1.5.0",
     "prop-types": "^15.7.2",
@@ -44,10 +45,12 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
+    "react-stripe-checkout": "^2.6.3",
     "react-swipeable-views": "0.13.9",
     "reactstrap": "^8.5.1",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
+    "redux-form": "^8.3.7",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "serve": "^11.3.2",
@@ -63,12 +66,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "lint:check": "eslint . --ext=js,jsx;  exit 0",
     "lint:fix": "eslint . --ext=js,jsx --fix;  exit 0",
     "build-package-css": "cp src/assets/css/material-dashboard-react.css dist/material-dashboard-react.css",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
