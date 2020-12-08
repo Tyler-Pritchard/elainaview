@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Auth } from 'redux/reducers/auth';
 import { connect } from 'react-redux';
-// import * as actions from '../src/redux/actions';
+import './redux/actions/ActionCreators';
 
 import Login from './views/Login/Login';
 import Signup from './views/Signup/Signup';
@@ -11,7 +11,7 @@ import Customer from './layouts/Customer';
 
 class App extends Component {
   componentDidMount() {
-    this.props.fetchUser();
+    // this.props.fetchUser();
   }
   render() {
     return (
