@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { Auth } from 'redux/reducers/auth';
 import { connect } from 'react-redux';
-import './redux/actions/ActionCreators';
+import * as actions from './redux/actions/ActionCreators';
 
 import Login from './views/Login/Login';
 import Signup from './views/Signup/Signup';
@@ -11,7 +10,7 @@ import Customer from './layouts/Customer';
 
 class App extends Component {
   componentDidMount() {
-    // this.props.fetchUser();
+    this.props.fetchUser();
   }
   render() {
     return (
@@ -20,7 +19,6 @@ class App extends Component {
           <div>
             <Route exact path="/" component={Login} />
             <Route path="/signup" component={Signup} />
-            <Route path="/auth/google" component={Auth} />
             <Route path="/admin" component={Admin} />
             <Route path ="/customer" component={Customer} />
           </div>
@@ -30,4 +28,4 @@ class App extends Component {
   }
 };
 
-export default connect(null, null)(App);
+export default connect(null, actions)(App);
