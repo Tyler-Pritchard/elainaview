@@ -33,16 +33,18 @@ class ChatWindow extends Component {
  
   render() {
     return (
-      <Launcher
-        agentProfile={{
-          teamName: 'Elaina',
-          imageUrl: `${avatar}`
-        }}
-        onMessageWasSent={this._onMessageWasSent.bind(this)}
-        messageList={this.state.messageList}
-        showEmoji
-        className='chatWindow'
-      />
+      <div>
+        <Launcher
+          agentProfile={{
+            teamName: 'Elaina',
+            imageUrl: `${avatar}`
+          }}
+          onMessageWasSent={this._onMessageWasSent.bind(this)}
+          messageList={this.state.messageList}
+          showEmoji
+          className='chatWindow'
+        />
+      </div>
     )
   }
 }
