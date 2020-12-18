@@ -19,7 +19,7 @@ import UserDocs from 'views/UserProfile/UserDocs.js';
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-dashboard-react/components/searchbarStyle.js";
 
-import marc from './marc.jpg';
+import marc from './docImage.jpg';
 
 const useStyles = makeStyles(styles);
 
@@ -50,22 +50,23 @@ const Search = () => {
           srsearch: debouncedTerm,
         },
       });
-
+      console.log(data, "DATA OBJECT");
       setResults(data.query.search);
     };
     search();
   }, [debouncedTerm]);
 
   const renderedResults = results.map((result) => {
+    console.log(result, "THE RESULT")
     return (
       <GridItem>
         <Card style={{width: "23vw", display: "flex", alignItems: "center", textAlign: "center"}}>
-          {/* <CardAvatar> */}
+          <CardAvatar>
             <img src={marc} 
             alt="user_avatar_url"
             style={{width: "40%"}}
           />
-          {/* </CardAvatar> */}
+          </CardAvatar>
           <div key={result.pageid} className="item">
             <div className="right floated content">
               <Button
@@ -76,7 +77,8 @@ const Search = () => {
               </Button>
               <Button
                 color="info"
-                href={`https://en.wikipedia.org?curid=${result.debouncedTerm}`}
+                href={`https://localhost:3001/${result.debouncedTerm}`}
+                // href={`https://en.wikipedia.org?curid=${result.debouncedTerm}`}
                 target="_blank"
               >
                 Open Document
@@ -84,7 +86,7 @@ const Search = () => {
             </div>
             <div className="content">
               <CardHeader>{result.title}</CardHeader>
-              {/* <CardBody dangerouslySetInnerHTML={{ __html: result.snippet }}></CardBody> */}
+              <CardBody dangerouslySetInnerHTML={{ __html: result.snippet }}></CardBody>
             </div>
           </div>
         </Card>
