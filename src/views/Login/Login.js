@@ -13,6 +13,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import image from './columns2.png';
+import GoogleButton from 'react-google-button';
+
 
 function Copyright() {
   return (
@@ -40,11 +42,16 @@ const SignInSide = () => {
           <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
           </Avatar>
-          <li>
-              <Link color="inherit" href="auth/google">
-                  Login With Google
+         
+              <Link href="auth/google">
+                <GoogleButton
+                  type='dark'
+                  onClick={() => { 
+                    console.log('Google button clicked') 
+                  }}
+                />
               </Link>
-          </li>
+        
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>

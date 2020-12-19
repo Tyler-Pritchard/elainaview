@@ -14,7 +14,7 @@ const documentsStyle = {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundBlendMode: "luminosity",
-    minHeight: "calc(100vh - 123px)"
+    minHeight: "calc(100vh - 23px)"
   },
   content: {
     backgroundColor: '0,0,0,0,.5',
