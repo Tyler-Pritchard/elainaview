@@ -1,0 +1,5 @@
+.chatWindow {
+    position: fixed;
+    z-index: 999999 !important;
+    box-shadow: .5vh 1vw;
+}

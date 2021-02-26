@@ -1,0 +1,23 @@
+{
+  "presets": [ 
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": ["> 1%", "last 2 versions"]
+        }
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "transform-class-properties",
+    "transform-react-jsx",
+    "transform-object-rest-spread",
+    ["module-resolver", {
+      "root": ["./src"]
+      }],
+      ["import-rename", {"^(.*)\\.jsx$": "$1"}]
+    ]
+  }

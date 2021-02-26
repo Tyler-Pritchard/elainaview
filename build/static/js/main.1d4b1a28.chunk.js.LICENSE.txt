@@ -1,0 +1,31 @@
+/*!
+
+ =========================================================
+ * Material Dashboard React - v1.9.0 based on Material Dashboard - v1.2.0
+ =========================================================
+
+ * Product Page: http://www.creative-tim.com/product/material-dashboard-react
+ * Copyright 2020 Creative Tim (http://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-react/blob/master/LICENSE.md)
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+/*!
+
+ =========================================================
+ * Material Kit React - v1.9.0 based on Material Kit - v2.0.2
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/material-kit-react
+ * Copyright 2020 Creative Tim (https://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/material-kit-react/blob/master/LICENSE.md)
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
