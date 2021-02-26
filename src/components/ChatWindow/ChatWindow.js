@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import {Launcher} from 'react-chat-window';
 
+import dialogflow from "@google-cloud/dialogflow";
+import axios from "axios";
+
 import avatar from './elaina_avatar2.jpg';
 import '../../assets/css/chatWindowStyle.css';
  
@@ -13,10 +16,23 @@ class ChatWindow extends Component {
     };
   }
  
+ async sendMessagesToWebhook() {
+        try {
+            const request = await axios.post(
+                "/api/webhook",
+                this.state.messageList
+            );
+            console.log(request);
+        } catch (e) {
+            console.error(e);
+        }
+    }
+ 
   _onMessageWasSent(message) {
     this.setState({
       messageList: [...this.state.messageList, message]
     })
+   this.sendMessageToWebhook(message);
   }
  
   _sendMessage(text) {
