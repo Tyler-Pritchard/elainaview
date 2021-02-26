@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Launcher } from "react-chat-window";
-import uuid from "uuid";
-import dialogflow from "@google-cloud/dialogflow";
 import axios from "axios";
 
 import avatar from "./elaina_avatar2.jpg";
@@ -15,23 +13,15 @@ class ChatWindow extends Component {
         };
     }
 
-    async sendMessageToWebhook(message) {
-        try {
-            const request = await axios.post(
-                "/api/webhook",
-                this.state.messageList
-            );
-            console.log(request);
-        } catch (e) {
-            console.error(e);
-        }
-    }
-
     _onMessageWasSent(message) {
-        this.setState({
-            messageList: [...this.state.messageList, message],
-        });
-        this.sendMessageToWebhook(message);
+        this.setState(
+            {
+                messageList: [...this.state.messageList, message],
+            },
+            () => {
+                this.sendMessagesToWebhook();
+            }
+        );
     }
 
     _sendMessage(text) {
@@ -46,6 +36,32 @@ class ChatWindow extends Component {
                     },
                 ],
             });
+        }
+    }
+
+    async sendMessagesToWebhook() {
+        try {
+            const { data } = await axios.post(
+                "/api/webhook",
+                this.state.messageList
+            );
+
+            const elainaResponse = {
+                author: "Elaina",
+                data: { text: data },
+                type: "text",
+            };
+
+            this.setState(
+                {
+                    messageList: [...this.state.messageList, elainaResponse],
+                },
+                () => {
+                    console.log(this.state.messageList);
+                }
+            );
+        } catch (e) {
+            console.error(e);
         }
     }
 
